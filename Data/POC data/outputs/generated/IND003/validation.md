@@ -1,0 +1,48 @@
+# Validation Summary
+
+Case: IND003
+
+## PASS
+- Product name/code exists (product.code_name)
+- Protocol number exists (protocol.protocol_number)
+- Protocol phase exists (protocol.phase)
+- Submission type exists (submission.submission_type)
+- Submission date exists (submission.submission_date)
+- Sponsor contact title is available (sponsor.contact_title)
+- Protocol date is available (protocol.protocol_date)
+- Investigator email is available (investigator.email)
+- Cover Letter and 1571 use the same product name (product.code_name)
+- Cover Letter and 1571 use the same protocol number (protocol.protocol_number)
+- Cover Letter fact is supported by canonical data. (submission.submission_date)
+- Cover Letter fact is supported by canonical data. (submission.submission_type)
+- Cover Letter fact is supported by canonical data. (submission.serial_number)
+- Cover Letter fact is supported by canonical data. (sponsor.address_line_1)
+- Cover Letter fact is supported by canonical data. (sponsor.address_line_2)
+- Cover Letter fact is supported by canonical data. (sponsor.city)
+- Cover Letter fact is supported by canonical data. (sponsor.state)
+- Cover Letter fact is supported by canonical data. (sponsor.postal_code)
+- Cover Letter fact is supported by canonical data. (sponsor.country)
+- Cover Letter fact is supported by canonical data. (sponsor.contact_name)
+- Cover Letter fact is supported by canonical data. (sponsor.contact_title)
+- Cover Letter fact is supported by canonical data. (sponsor.phone)
+- Cover Letter fact is supported by canonical data. (sponsor.email)
+- Cover Letter fact is supported by canonical data. (product.code_name)
+- Cover Letter fact is supported by canonical data. (product.dosage_form)
+- Cover Letter fact is supported by canonical data. (product.route)
+- Cover Letter fact is supported by canonical data. (product.indication)
+- Cover Letter fact is supported by canonical data. (protocol.protocol_number)
+- Cover Letter fact is supported by canonical data. (protocol.title)
+- Cover Letter fact is supported by canonical data. (protocol.phase)
+- Cover Letter fact is supported by canonical data. (protocol.protocol_date)
+
+## WARNING
+- None
+
+## MISSING
+- None
+
+## CONFLICT
+- Sponsor legal name exists, but source records conflict; human review required. (sponsor.legal_name)
+- Conflicting values found for sponsor.legal_name; human review required. (sponsor.legal_name)
+- Conflicting values found for protocol.version; human review required. (protocol.version)
+- Cover Letter and 1571 use the same sponsor name, but the canonical field is conflicted. (sponsor.legal_name)

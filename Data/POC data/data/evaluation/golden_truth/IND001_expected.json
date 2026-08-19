@@ -1,0 +1,15 @@
+{
+  "case_id": "IND001",
+  "expected_canonical": {
+    "sponsor.legal_name": "AsterVale Therapeutics, Inc.",
+    "product.code_name": "AVC-101",
+    "protocol.protocol_number": "AVC101-101",
+    "protocol.phase": "Phase 1",
+    "submission.submission_type": "Initial IND",
+    "submission.submission_date": "2026-08-18"
+  },
+  "expected_validation": {
+    "required_missing": [],
+    "conflict_fields": []
+  }
+}

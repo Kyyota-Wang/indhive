@@ -1,0 +1,453 @@
+{
+  "case_id": "IND005",
+  "case_label": "IND005 - CNV-512 clean initial IND",
+  "scenario_type": "clean",
+  "sponsor": {
+    "legal_name": "CardioNova Therapeutics Incorporated",
+    "address_line_1": "1500 Signal Hill Road",
+    "address_line_2": null,
+    "city": "Austin",
+    "state": "TX",
+    "postal_code": "78701",
+    "country": "USA",
+    "contact_name": "Rebecca Lin",
+    "contact_title": "Executive Director, Regulatory Affairs",
+    "phone": "512-555-0163",
+    "email": "rebecca.lin@cardionova.example"
+  },
+  "product": {
+    "code_name": "CNV-512",
+    "generic_name": "fictionalmycin",
+    "dosage_form": "sterile injectable solution",
+    "route": "intravenous infusion",
+    "indication": "heart failure with preserved ejection fraction"
+  },
+  "protocol": {
+    "protocol_number": "CNV512-102",
+    "title": "A Phase 2a Study of CNV-512 in Adults with Heart Failure with Preserved Ejection Fraction",
+    "phase": "Phase 2a",
+    "version": "1.0",
+    "protocol_date": "2026-07-05"
+  },
+  "submission": {
+    "submission_type": "Initial IND",
+    "submission_date": "2026-08-18",
+    "serial_number": "0000",
+    "ind_number": null
+  },
+  "investigator": {
+    "name": "Samuel Ortiz, MD",
+    "institution": "Central Texas Cardiometabolic Research Center",
+    "address": "55 Heartland Plaza, Austin, TX 78712",
+    "phone": "512-555-0116",
+    "email": "samuel.ortiz@ctcrc.example"
+  },
+  "plan": {
+    "rationale": "CNV-512 is an intravenous agent intended to improve exercise capacity in heart failure with preserved ejection fraction, a condition with no approved disease-modifying therapy. A prior Phase 1 study in healthy volunteers established tolerability across the dose range now proposed.",
+    "general_approach": "Development moves directly to a Phase 2a study in the target population, using exercise capacity and haemodynamic endpoints to establish proof of mechanism before a larger efficacy study is designed.",
+    "first_year_scope": "One Phase 2a study in adults with heart failure with preserved ejection fraction is planned in the first year following submission.",
+    "estimated_enrollment": "Approximately 60 participants randomised across two dose levels and placebo.",
+    "anticipated_risks": "Anticipated risks of particular severity are symptomatic hypotension during and shortly after infusion, and renal function decline observed at supratherapeutic exposures in the 26-week rat study. Blood pressure is monitored throughout infusion and creatinine is a protocol-specified stopping criterion."
+  },
+  "planned_studies": [
+    {
+      "study_id": "CNV512-102",
+      "title": "A Phase 2a Study of CNV-512 in Adults with Heart Failure with Preserved Ejection Fraction",
+      "objectives": "To assess the effect of CNV-512 on exercise capacity and to evaluate safety and tolerability in the target population.",
+      "design": "Randomised, double-blind, placebo-controlled, parallel-group study with two active dose levels.",
+      "sample_size": "Approximately 60 participants, 20 per arm.",
+      "population": "Adults with heart failure with preserved ejection fraction, NYHA class II to III, with an ejection fraction of at least 50 percent.",
+      "parameters": "Primary endpoint is change in six-minute walk distance. Safety assessed by adverse events, blood pressure, renal function and ECG.",
+      "status": "Protocol submitted with this Initial IND. Enrolment has not started.",
+      "source_record": "investigational_plan"
+    }
+  ],
+  "provenance": {
+    "sponsor.legal_name": {
+      "field": "sponsor.legal_name",
+      "value": "CardioNova Therapeutics Incorporated",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.legal_name"
+        }
+      ]
+    },
+    "sponsor.address_line_1": {
+      "field": "sponsor.address_line_1",
+      "value": "1500 Signal Hill Road",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_1"
+        }
+      ]
+    },
+    "sponsor.address_line_2": {
+      "field": "sponsor.address_line_2",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_2"
+        }
+      ]
+    },
+    "sponsor.city": {
+      "field": "sponsor.city",
+      "value": "Austin",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.city"
+        }
+      ]
+    },
+    "sponsor.state": {
+      "field": "sponsor.state",
+      "value": "TX",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.state"
+        }
+      ]
+    },
+    "sponsor.postal_code": {
+      "field": "sponsor.postal_code",
+      "value": "78701",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.postal_code"
+        }
+      ]
+    },
+    "sponsor.country": {
+      "field": "sponsor.country",
+      "value": "USA",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.country"
+        }
+      ]
+    },
+    "sponsor.contact_name": {
+      "field": "sponsor.contact_name",
+      "value": "Rebecca Lin",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_name"
+        }
+      ]
+    },
+    "sponsor.contact_title": {
+      "field": "sponsor.contact_title",
+      "value": "Executive Director, Regulatory Affairs",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_title"
+        }
+      ]
+    },
+    "sponsor.phone": {
+      "field": "sponsor.phone",
+      "value": "512-555-0163",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.phone"
+        }
+      ]
+    },
+    "sponsor.email": {
+      "field": "sponsor.email",
+      "value": "rebecca.lin@cardionova.example",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.email"
+        }
+      ]
+    },
+    "product.code_name": {
+      "field": "product.code_name",
+      "value": "CNV-512",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.code_name"
+        }
+      ]
+    },
+    "product.generic_name": {
+      "field": "product.generic_name",
+      "value": "fictionalmycin",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.generic_name"
+        }
+      ]
+    },
+    "product.dosage_form": {
+      "field": "product.dosage_form",
+      "value": "sterile injectable solution",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.dosage_form"
+        }
+      ]
+    },
+    "product.route": {
+      "field": "product.route",
+      "value": "intravenous infusion",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.route"
+        }
+      ]
+    },
+    "product.indication": {
+      "field": "product.indication",
+      "value": "heart failure with preserved ejection fraction",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.indication"
+        }
+      ]
+    },
+    "protocol.protocol_number": {
+      "field": "protocol.protocol_number",
+      "value": "CNV512-102",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_number"
+        }
+      ]
+    },
+    "protocol.title": {
+      "field": "protocol.title",
+      "value": "A Phase 2a Study of CNV-512 in Adults with Heart Failure with Preserved Ejection Fraction",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.title"
+        }
+      ]
+    },
+    "protocol.phase": {
+      "field": "protocol.phase",
+      "value": "Phase 2a",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.phase"
+        }
+      ]
+    },
+    "protocol.version": {
+      "field": "protocol.version",
+      "value": "1.0",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.version"
+        }
+      ]
+    },
+    "protocol.protocol_date": {
+      "field": "protocol.protocol_date",
+      "value": "2026-07-05",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_date"
+        }
+      ]
+    },
+    "submission.submission_type": {
+      "field": "submission.submission_type",
+      "value": "Initial IND",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_type"
+        }
+      ]
+    },
+    "submission.submission_date": {
+      "field": "submission.submission_date",
+      "value": "2026-08-18",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_date"
+        }
+      ]
+    },
+    "submission.serial_number": {
+      "field": "submission.serial_number",
+      "value": "0000",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.serial_number"
+        }
+      ]
+    },
+    "submission.ind_number": {
+      "field": "submission.ind_number",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.ind_number"
+        }
+      ]
+    },
+    "investigator.name": {
+      "field": "investigator.name",
+      "value": "Samuel Ortiz, MD",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.name"
+        }
+      ]
+    },
+    "investigator.institution": {
+      "field": "investigator.institution",
+      "value": "Central Texas Cardiometabolic Research Center",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.institution"
+        }
+      ]
+    },
+    "investigator.address": {
+      "field": "investigator.address",
+      "value": "55 Heartland Plaza, Austin, TX 78712",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.address"
+        }
+      ]
+    },
+    "investigator.phone": {
+      "field": "investigator.phone",
+      "value": "512-555-0116",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.phone"
+        }
+      ]
+    },
+    "investigator.email": {
+      "field": "investigator.email",
+      "value": "samuel.ortiz@ctcrc.example",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.email"
+        }
+      ]
+    },
+    "plan.rationale": {
+      "field": "plan.rationale",
+      "value": "CNV-512 is an intravenous agent intended to improve exercise capacity in heart failure with preserved ejection fraction, a condition with no approved disease-modifying therapy. A prior Phase 1 study in healthy volunteers established tolerability across the dose range now proposed.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.rationale"
+        }
+      ]
+    },
+    "plan.general_approach": {
+      "field": "plan.general_approach",
+      "value": "Development moves directly to a Phase 2a study in the target population, using exercise capacity and haemodynamic endpoints to establish proof of mechanism before a larger efficacy study is designed.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.general_approach"
+        }
+      ]
+    },
+    "plan.first_year_scope": {
+      "field": "plan.first_year_scope",
+      "value": "One Phase 2a study in adults with heart failure with preserved ejection fraction is planned in the first year following submission.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.first_year_scope"
+        }
+      ]
+    },
+    "plan.estimated_enrollment": {
+      "field": "plan.estimated_enrollment",
+      "value": "Approximately 60 participants randomised across two dose levels and placebo.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.estimated_enrollment"
+        }
+      ]
+    },
+    "plan.anticipated_risks": {
+      "field": "plan.anticipated_risks",
+      "value": "Anticipated risks of particular severity are symptomatic hypotension during and shortly after infusion, and renal function decline observed at supratherapeutic exposures in the 26-week rat study. Blood pressure is monitored throughout infusion and creatinine is a protocol-specified stopping criterion.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.anticipated_risks"
+        }
+      ]
+    }
+  },
+  "conflicts": []
+}

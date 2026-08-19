@@ -1,0 +1,411 @@
+{
+  "case_id": "IND008",
+  "case_label": "IND008 - ARD-77 missing required date",
+  "scenario_type": "missing",
+  "sponsor": {
+    "legal_name": "Ardena Rare Disease Labs, Inc.",
+    "address_line_1": "3300 Orchard Science Parkway",
+    "address_line_2": "Suite 140",
+    "city": "Columbus",
+    "state": "OH",
+    "postal_code": "43210",
+    "country": "USA",
+    "contact_name": "Iris Nakamura",
+    "contact_title": "Director, Regulatory Operations",
+    "phone": "614-555-0131",
+    "email": "iris.nakamura@ardenard.example"
+  },
+  "product": {
+    "code_name": "ARD-77",
+    "generic_name": null,
+    "dosage_form": "oral solution",
+    "route": "oral",
+    "indication": "fictional pediatric lysosomal storage disorder"
+  },
+  "protocol": {
+    "protocol_number": "ARD77-101",
+    "title": "A Phase 1/2 Study of ARD-77 in Pediatric Participants with a Fictional Lysosomal Storage Disorder",
+    "phase": "Phase 1/2",
+    "version": "0.8",
+    "protocol_date": "2026-07-09"
+  },
+  "submission": {
+    "submission_type": "Initial IND",
+    "submission_date": null,
+    "serial_number": "0000",
+    "ind_number": null
+  },
+  "investigator": {
+    "name": "Julia Moreno, MD",
+    "institution": "Midwest Pediatric Translational Research Center",
+    "address": "801 Children's Research Drive, Columbus, OH 43205",
+    "phone": "614-555-0174",
+    "email": "julia.moreno@mptrc.example"
+  },
+  "plan": {
+    "rationale": null,
+    "general_approach": null,
+    "first_year_scope": null,
+    "estimated_enrollment": null,
+    "anticipated_risks": null
+  },
+  "planned_studies": [],
+  "provenance": {
+    "sponsor.legal_name": {
+      "field": "sponsor.legal_name",
+      "value": "Ardena Rare Disease Labs, Inc.",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.legal_name"
+        }
+      ]
+    },
+    "sponsor.address_line_1": {
+      "field": "sponsor.address_line_1",
+      "value": "3300 Orchard Science Parkway",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_1"
+        }
+      ]
+    },
+    "sponsor.address_line_2": {
+      "field": "sponsor.address_line_2",
+      "value": "Suite 140",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_2"
+        }
+      ]
+    },
+    "sponsor.city": {
+      "field": "sponsor.city",
+      "value": "Columbus",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.city"
+        }
+      ]
+    },
+    "sponsor.state": {
+      "field": "sponsor.state",
+      "value": "OH",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.state"
+        }
+      ]
+    },
+    "sponsor.postal_code": {
+      "field": "sponsor.postal_code",
+      "value": "43210",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.postal_code"
+        }
+      ]
+    },
+    "sponsor.country": {
+      "field": "sponsor.country",
+      "value": "USA",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.country"
+        }
+      ]
+    },
+    "sponsor.contact_name": {
+      "field": "sponsor.contact_name",
+      "value": "Iris Nakamura",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_name"
+        }
+      ]
+    },
+    "sponsor.contact_title": {
+      "field": "sponsor.contact_title",
+      "value": "Director, Regulatory Operations",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_title"
+        }
+      ]
+    },
+    "sponsor.phone": {
+      "field": "sponsor.phone",
+      "value": "614-555-0131",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.phone"
+        }
+      ]
+    },
+    "sponsor.email": {
+      "field": "sponsor.email",
+      "value": "iris.nakamura@ardenard.example",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.email"
+        }
+      ]
+    },
+    "product.code_name": {
+      "field": "product.code_name",
+      "value": "ARD-77",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.code_name"
+        }
+      ]
+    },
+    "product.generic_name": {
+      "field": "product.generic_name",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.generic_name"
+        }
+      ]
+    },
+    "product.dosage_form": {
+      "field": "product.dosage_form",
+      "value": "oral solution",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.dosage_form"
+        }
+      ]
+    },
+    "product.route": {
+      "field": "product.route",
+      "value": "oral",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.route"
+        }
+      ]
+    },
+    "product.indication": {
+      "field": "product.indication",
+      "value": "fictional pediatric lysosomal storage disorder",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.indication"
+        }
+      ]
+    },
+    "protocol.protocol_number": {
+      "field": "protocol.protocol_number",
+      "value": "ARD77-101",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_number"
+        }
+      ]
+    },
+    "protocol.title": {
+      "field": "protocol.title",
+      "value": "A Phase 1/2 Study of ARD-77 in Pediatric Participants with a Fictional Lysosomal Storage Disorder",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.title"
+        }
+      ]
+    },
+    "protocol.phase": {
+      "field": "protocol.phase",
+      "value": "Phase 1/2",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.phase"
+        }
+      ]
+    },
+    "protocol.version": {
+      "field": "protocol.version",
+      "value": "0.8",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.version"
+        }
+      ]
+    },
+    "protocol.protocol_date": {
+      "field": "protocol.protocol_date",
+      "value": "2026-07-09",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_date"
+        }
+      ]
+    },
+    "submission.submission_type": {
+      "field": "submission.submission_type",
+      "value": "Initial IND",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_type"
+        }
+      ]
+    },
+    "submission.submission_date": {
+      "field": "submission.submission_date",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_date"
+        }
+      ]
+    },
+    "submission.serial_number": {
+      "field": "submission.serial_number",
+      "value": "0000",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.serial_number"
+        }
+      ]
+    },
+    "submission.ind_number": {
+      "field": "submission.ind_number",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.ind_number"
+        }
+      ]
+    },
+    "investigator.name": {
+      "field": "investigator.name",
+      "value": "Julia Moreno, MD",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.name"
+        }
+      ]
+    },
+    "investigator.institution": {
+      "field": "investigator.institution",
+      "value": "Midwest Pediatric Translational Research Center",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.institution"
+        }
+      ]
+    },
+    "investigator.address": {
+      "field": "investigator.address",
+      "value": "801 Children's Research Drive, Columbus, OH 43205",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.address"
+        }
+      ]
+    },
+    "investigator.phone": {
+      "field": "investigator.phone",
+      "value": "614-555-0174",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.phone"
+        }
+      ]
+    },
+    "investigator.email": {
+      "field": "investigator.email",
+      "value": "julia.moreno@mptrc.example",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.email"
+        }
+      ]
+    },
+    "plan.rationale": {
+      "field": "plan.rationale",
+      "value": null,
+      "sources": []
+    },
+    "plan.general_approach": {
+      "field": "plan.general_approach",
+      "value": null,
+      "sources": []
+    },
+    "plan.first_year_scope": {
+      "field": "plan.first_year_scope",
+      "value": null,
+      "sources": []
+    },
+    "plan.estimated_enrollment": {
+      "field": "plan.estimated_enrollment",
+      "value": null,
+      "sources": []
+    },
+    "plan.anticipated_risks": {
+      "field": "plan.anticipated_risks",
+      "value": null,
+      "sources": []
+    }
+  },
+  "conflicts": []
+}

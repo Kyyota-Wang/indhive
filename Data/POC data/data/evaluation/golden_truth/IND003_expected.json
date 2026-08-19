@@ -1,0 +1,17 @@
+{
+  "case_id": "IND003",
+  "expected_canonical": {
+    "product.code_name": "HBG-301",
+    "protocol.protocol_number": "HBG301-101",
+    "protocol.phase": "Phase 1/2",
+    "submission.submission_type": "Initial IND",
+    "submission.submission_date": "2026-08-18"
+  },
+  "expected_validation": {
+    "required_missing": [],
+    "conflict_fields": [
+      "sponsor.legal_name",
+      "protocol.version"
+    ]
+  }
+}

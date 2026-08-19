@@ -1,0 +1,122 @@
+{
+  "case_id": "IND008",
+  "document_name": "IND Cover Letter - POC Draft",
+  "generation_method": "template_fallback",
+  "model": null,
+  "text": "# IND Cover Letter - POC Draft\n\n**POC draft for demonstration only. Not FDA-submission-ready.**\n\n[Submission date unavailable]\n\nFood and Drug Administration\nCenter for Drug Evaluation and Research\n\nRe: Initial IND for ARD-77\n\nDear FDA Reviewer:\n\nArdena Rare Disease Labs, Inc. is submitting this POC draft package for ARD-77. This generated document is based only on the selected synthetic IND case.\n\nThe referenced clinical protocol information is: Protocol ARD77-101; A Phase 1/2 Study of ARD-77 in Pediatric Participants with a Fictional Lysosomal Storage Disorder; Phase 1/2.\n\nThe POC Module 1 package includes:\n- IND Cover Letter\n- FDA Form 1571 POC Field View\n- Simplified Module 1 Table of Contents\n- Basic validation results\n\nSponsor contact:\nIris Nakamura\nDirector, Regulatory Operations\n614-555-0131\niris.nakamura@ardenard.example\n\nSincerely,\nIris Nakamura",
+  "facts_used": [
+    {
+      "path": "submission.submission_type",
+      "value": "Initial IND",
+      "source": "synthetic_case.IND008.submission.submission_type"
+    },
+    {
+      "path": "submission.serial_number",
+      "value": "0000",
+      "source": "synthetic_case.IND008.submission.serial_number"
+    },
+    {
+      "path": "sponsor.legal_name",
+      "value": "Ardena Rare Disease Labs, Inc.",
+      "source": "synthetic_case.IND008.sponsor.legal_name"
+    },
+    {
+      "path": "sponsor.address_line_1",
+      "value": "3300 Orchard Science Parkway",
+      "source": "synthetic_case.IND008.sponsor.address_line_1"
+    },
+    {
+      "path": "sponsor.address_line_2",
+      "value": "Suite 140",
+      "source": "synthetic_case.IND008.sponsor.address_line_2"
+    },
+    {
+      "path": "sponsor.city",
+      "value": "Columbus",
+      "source": "synthetic_case.IND008.sponsor.city"
+    },
+    {
+      "path": "sponsor.state",
+      "value": "OH",
+      "source": "synthetic_case.IND008.sponsor.state"
+    },
+    {
+      "path": "sponsor.postal_code",
+      "value": "43210",
+      "source": "synthetic_case.IND008.sponsor.postal_code"
+    },
+    {
+      "path": "sponsor.country",
+      "value": "USA",
+      "source": "synthetic_case.IND008.sponsor.country"
+    },
+    {
+      "path": "sponsor.contact_name",
+      "value": "Iris Nakamura",
+      "source": "synthetic_case.IND008.sponsor.contact_name"
+    },
+    {
+      "path": "sponsor.contact_title",
+      "value": "Director, Regulatory Operations",
+      "source": "synthetic_case.IND008.sponsor.contact_title"
+    },
+    {
+      "path": "sponsor.phone",
+      "value": "614-555-0131",
+      "source": "synthetic_case.IND008.sponsor.phone"
+    },
+    {
+      "path": "sponsor.email",
+      "value": "iris.nakamura@ardenard.example",
+      "source": "synthetic_case.IND008.sponsor.email"
+    },
+    {
+      "path": "product.code_name",
+      "value": "ARD-77",
+      "source": "synthetic_case.IND008.product.code_name"
+    },
+    {
+      "path": "product.dosage_form",
+      "value": "oral solution",
+      "source": "synthetic_case.IND008.product.dosage_form"
+    },
+    {
+      "path": "product.route",
+      "value": "oral",
+      "source": "synthetic_case.IND008.product.route"
+    },
+    {
+      "path": "product.indication",
+      "value": "fictional pediatric lysosomal storage disorder",
+      "source": "synthetic_case.IND008.product.indication"
+    },
+    {
+      "path": "protocol.protocol_number",
+      "value": "ARD77-101",
+      "source": "synthetic_case.IND008.protocol.protocol_number"
+    },
+    {
+      "path": "protocol.title",
+      "value": "A Phase 1/2 Study of ARD-77 in Pediatric Participants with a Fictional Lysosomal Storage Disorder",
+      "source": "synthetic_case.IND008.protocol.title"
+    },
+    {
+      "path": "protocol.phase",
+      "value": "Phase 1/2",
+      "source": "synthetic_case.IND008.protocol.phase"
+    },
+    {
+      "path": "protocol.version",
+      "value": "0.8",
+      "source": "synthetic_case.IND008.protocol.version"
+    },
+    {
+      "path": "protocol.protocol_date",
+      "value": "2026-07-09",
+      "source": "synthetic_case.IND008.protocol.protocol_date"
+    }
+  ],
+  "warnings": [
+    "LLM generation unavailable; used deterministic fallback. Reason: RuntimeError: OPENAI_API_KEY is not set"
+  ]
+}

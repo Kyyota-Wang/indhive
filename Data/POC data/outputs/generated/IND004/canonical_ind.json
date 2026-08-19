@@ -1,0 +1,453 @@
+{
+  "case_id": "IND004",
+  "case_label": "IND004 - RNV-220 clean initial IND",
+  "scenario_type": "clean",
+  "sponsor": {
+    "legal_name": "Renovia Pulmonary Sciences, Inc.",
+    "address_line_1": "6200 Lakefront Boulevard",
+    "address_line_2": "Floor 4",
+    "city": "Madison",
+    "state": "WI",
+    "postal_code": "53703",
+    "country": "USA",
+    "contact_name": "Thomas Keane",
+    "contact_title": "Head of Regulatory Strategy",
+    "phone": "608-555-0194",
+    "email": "thomas.keane@renoviaps.example"
+  },
+  "product": {
+    "code_name": "RNV-220",
+    "generic_name": null,
+    "dosage_form": "metered-dose inhalation aerosol",
+    "route": "inhalation",
+    "indication": "moderate persistent asthma"
+  },
+  "protocol": {
+    "protocol_number": "RNV220-101",
+    "title": "A Phase 1 Study of RNV-220 in Healthy Adult Volunteers",
+    "phase": "Phase 1",
+    "version": "1.0",
+    "protocol_date": "2026-06-28"
+  },
+  "submission": {
+    "submission_type": "Initial IND",
+    "submission_date": "2026-08-18",
+    "serial_number": "0000",
+    "ind_number": null
+  },
+  "investigator": {
+    "name": "Nora Stein, MD",
+    "institution": "Lakeshore Respiratory Research Unit",
+    "address": "321 Clinical Trials Court, Madison, WI 53705",
+    "phone": "608-555-0171",
+    "email": "nora.stein@lrru.example"
+  },
+  "plan": {
+    "rationale": "RNV-220 is an inhaled agent intended to provide once-daily control of moderate persistent asthma with lower systemic exposure than currently available oral therapy. Nonclinical inhalation toxicology supports evaluation in humans at the proposed doses.",
+    "general_approach": "A first-in-human study in healthy adult volunteers will establish safety, tolerability and systemic exposure following single and repeat inhaled doses before any study is conducted in participants with asthma.",
+    "first_year_scope": "One Phase 1 single- and multiple-ascending-dose study in healthy adult volunteers is planned in the first year. A patient study is contemplated thereafter but its protocol has not been developed.",
+    "estimated_enrollment": "Approximately 48 healthy adult volunteers across all dose cohorts.",
+    "anticipated_risks": "Anticipated risks of particular severity are bronchospasm following inhaled administration and, at the highest planned doses, the systemic corticosteroid-like effects seen in 13-week dog inhalation toxicology. Spirometry is performed before and after each dose, and rescue medication is available at the site."
+  },
+  "planned_studies": [
+    {
+      "study_id": "RNV220-101",
+      "title": "A Phase 1 Study of RNV-220 in Healthy Adult Volunteers",
+      "objectives": "To evaluate the safety and tolerability of single and multiple ascending inhaled doses of RNV-220 and to characterise systemic pharmacokinetics.",
+      "design": "Randomised, double-blind, placebo-controlled, single- and multiple-ascending-dose study.",
+      "sample_size": "Approximately 48 participants, 8 per cohort randomised 6:2 active to placebo.",
+      "population": "Healthy adults aged 18 to 55 with normal spirometry and no history of reactive airway disease.",
+      "parameters": "Adverse events, spirometry, vital signs, ECG, clinical laboratory tests, and plasma pharmacokinetics.",
+      "status": "Protocol submitted with this Initial IND. Enrolment has not started.",
+      "source_record": "investigational_plan"
+    }
+  ],
+  "provenance": {
+    "sponsor.legal_name": {
+      "field": "sponsor.legal_name",
+      "value": "Renovia Pulmonary Sciences, Inc.",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.legal_name"
+        }
+      ]
+    },
+    "sponsor.address_line_1": {
+      "field": "sponsor.address_line_1",
+      "value": "6200 Lakefront Boulevard",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_1"
+        }
+      ]
+    },
+    "sponsor.address_line_2": {
+      "field": "sponsor.address_line_2",
+      "value": "Floor 4",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_2"
+        }
+      ]
+    },
+    "sponsor.city": {
+      "field": "sponsor.city",
+      "value": "Madison",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.city"
+        }
+      ]
+    },
+    "sponsor.state": {
+      "field": "sponsor.state",
+      "value": "WI",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.state"
+        }
+      ]
+    },
+    "sponsor.postal_code": {
+      "field": "sponsor.postal_code",
+      "value": "53703",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.postal_code"
+        }
+      ]
+    },
+    "sponsor.country": {
+      "field": "sponsor.country",
+      "value": "USA",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.country"
+        }
+      ]
+    },
+    "sponsor.contact_name": {
+      "field": "sponsor.contact_name",
+      "value": "Thomas Keane",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_name"
+        }
+      ]
+    },
+    "sponsor.contact_title": {
+      "field": "sponsor.contact_title",
+      "value": "Head of Regulatory Strategy",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_title"
+        }
+      ]
+    },
+    "sponsor.phone": {
+      "field": "sponsor.phone",
+      "value": "608-555-0194",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.phone"
+        }
+      ]
+    },
+    "sponsor.email": {
+      "field": "sponsor.email",
+      "value": "thomas.keane@renoviaps.example",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.email"
+        }
+      ]
+    },
+    "product.code_name": {
+      "field": "product.code_name",
+      "value": "RNV-220",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.code_name"
+        }
+      ]
+    },
+    "product.generic_name": {
+      "field": "product.generic_name",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.generic_name"
+        }
+      ]
+    },
+    "product.dosage_form": {
+      "field": "product.dosage_form",
+      "value": "metered-dose inhalation aerosol",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.dosage_form"
+        }
+      ]
+    },
+    "product.route": {
+      "field": "product.route",
+      "value": "inhalation",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.route"
+        }
+      ]
+    },
+    "product.indication": {
+      "field": "product.indication",
+      "value": "moderate persistent asthma",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.indication"
+        }
+      ]
+    },
+    "protocol.protocol_number": {
+      "field": "protocol.protocol_number",
+      "value": "RNV220-101",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_number"
+        }
+      ]
+    },
+    "protocol.title": {
+      "field": "protocol.title",
+      "value": "A Phase 1 Study of RNV-220 in Healthy Adult Volunteers",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.title"
+        }
+      ]
+    },
+    "protocol.phase": {
+      "field": "protocol.phase",
+      "value": "Phase 1",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.phase"
+        }
+      ]
+    },
+    "protocol.version": {
+      "field": "protocol.version",
+      "value": "1.0",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.version"
+        }
+      ]
+    },
+    "protocol.protocol_date": {
+      "field": "protocol.protocol_date",
+      "value": "2026-06-28",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_date"
+        }
+      ]
+    },
+    "submission.submission_type": {
+      "field": "submission.submission_type",
+      "value": "Initial IND",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_type"
+        }
+      ]
+    },
+    "submission.submission_date": {
+      "field": "submission.submission_date",
+      "value": "2026-08-18",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_date"
+        }
+      ]
+    },
+    "submission.serial_number": {
+      "field": "submission.serial_number",
+      "value": "0000",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.serial_number"
+        }
+      ]
+    },
+    "submission.ind_number": {
+      "field": "submission.ind_number",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.ind_number"
+        }
+      ]
+    },
+    "investigator.name": {
+      "field": "investigator.name",
+      "value": "Nora Stein, MD",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.name"
+        }
+      ]
+    },
+    "investigator.institution": {
+      "field": "investigator.institution",
+      "value": "Lakeshore Respiratory Research Unit",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.institution"
+        }
+      ]
+    },
+    "investigator.address": {
+      "field": "investigator.address",
+      "value": "321 Clinical Trials Court, Madison, WI 53705",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.address"
+        }
+      ]
+    },
+    "investigator.phone": {
+      "field": "investigator.phone",
+      "value": "608-555-0171",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.phone"
+        }
+      ]
+    },
+    "investigator.email": {
+      "field": "investigator.email",
+      "value": "nora.stein@lrru.example",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.email"
+        }
+      ]
+    },
+    "plan.rationale": {
+      "field": "plan.rationale",
+      "value": "RNV-220 is an inhaled agent intended to provide once-daily control of moderate persistent asthma with lower systemic exposure than currently available oral therapy. Nonclinical inhalation toxicology supports evaluation in humans at the proposed doses.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.rationale"
+        }
+      ]
+    },
+    "plan.general_approach": {
+      "field": "plan.general_approach",
+      "value": "A first-in-human study in healthy adult volunteers will establish safety, tolerability and systemic exposure following single and repeat inhaled doses before any study is conducted in participants with asthma.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.general_approach"
+        }
+      ]
+    },
+    "plan.first_year_scope": {
+      "field": "plan.first_year_scope",
+      "value": "One Phase 1 single- and multiple-ascending-dose study in healthy adult volunteers is planned in the first year. A patient study is contemplated thereafter but its protocol has not been developed.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.first_year_scope"
+        }
+      ]
+    },
+    "plan.estimated_enrollment": {
+      "field": "plan.estimated_enrollment",
+      "value": "Approximately 48 healthy adult volunteers across all dose cohorts.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.estimated_enrollment"
+        }
+      ]
+    },
+    "plan.anticipated_risks": {
+      "field": "plan.anticipated_risks",
+      "value": "Anticipated risks of particular severity are bronchospasm following inhaled administration and, at the highest planned doses, the systemic corticosteroid-like effects seen in 13-week dog inhalation toxicology. Spirometry is performed before and after each dose, and rescue medication is available at the site.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.anticipated_risks"
+        }
+      ]
+    }
+  },
+  "conflicts": []
+}

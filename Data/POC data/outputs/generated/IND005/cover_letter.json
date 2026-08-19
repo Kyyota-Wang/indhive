@@ -1,0 +1,127 @@
+{
+  "case_id": "IND005",
+  "document_name": "IND Cover Letter - POC Draft",
+  "generation_method": "template_fallback",
+  "model": null,
+  "text": "# IND Cover Letter - POC Draft\n\n**POC draft for demonstration only. Not FDA-submission-ready.**\n\n2026-08-18\n\nFood and Drug Administration\nCenter for Drug Evaluation and Research\n\nRe: Initial IND for CNV-512\n\nDear FDA Reviewer:\n\nCardioNova Therapeutics Incorporated is submitting this POC draft package for CNV-512. This generated document is based only on the selected synthetic IND case.\n\nThe referenced clinical protocol information is: Protocol CNV512-102; A Phase 2a Study of CNV-512 in Adults with Heart Failure with Preserved Ejection Fraction; Phase 2a.\n\nThe POC Module 1 package includes:\n- IND Cover Letter\n- FDA Form 1571 POC Field View\n- Simplified Module 1 Table of Contents\n- Basic validation results\n\nSponsor contact:\nRebecca Lin\nExecutive Director, Regulatory Affairs\n512-555-0163\nrebecca.lin@cardionova.example\n\nSincerely,\nRebecca Lin",
+  "facts_used": [
+    {
+      "path": "submission.submission_date",
+      "value": "2026-08-18",
+      "source": "synthetic_case.IND005.submission.submission_date"
+    },
+    {
+      "path": "submission.submission_type",
+      "value": "Initial IND",
+      "source": "synthetic_case.IND005.submission.submission_type"
+    },
+    {
+      "path": "submission.serial_number",
+      "value": "0000",
+      "source": "synthetic_case.IND005.submission.serial_number"
+    },
+    {
+      "path": "sponsor.legal_name",
+      "value": "CardioNova Therapeutics Incorporated",
+      "source": "synthetic_case.IND005.sponsor.legal_name"
+    },
+    {
+      "path": "sponsor.address_line_1",
+      "value": "1500 Signal Hill Road",
+      "source": "synthetic_case.IND005.sponsor.address_line_1"
+    },
+    {
+      "path": "sponsor.city",
+      "value": "Austin",
+      "source": "synthetic_case.IND005.sponsor.city"
+    },
+    {
+      "path": "sponsor.state",
+      "value": "TX",
+      "source": "synthetic_case.IND005.sponsor.state"
+    },
+    {
+      "path": "sponsor.postal_code",
+      "value": "78701",
+      "source": "synthetic_case.IND005.sponsor.postal_code"
+    },
+    {
+      "path": "sponsor.country",
+      "value": "USA",
+      "source": "synthetic_case.IND005.sponsor.country"
+    },
+    {
+      "path": "sponsor.contact_name",
+      "value": "Rebecca Lin",
+      "source": "synthetic_case.IND005.sponsor.contact_name"
+    },
+    {
+      "path": "sponsor.contact_title",
+      "value": "Executive Director, Regulatory Affairs",
+      "source": "synthetic_case.IND005.sponsor.contact_title"
+    },
+    {
+      "path": "sponsor.phone",
+      "value": "512-555-0163",
+      "source": "synthetic_case.IND005.sponsor.phone"
+    },
+    {
+      "path": "sponsor.email",
+      "value": "rebecca.lin@cardionova.example",
+      "source": "synthetic_case.IND005.sponsor.email"
+    },
+    {
+      "path": "product.code_name",
+      "value": "CNV-512",
+      "source": "synthetic_case.IND005.product.code_name"
+    },
+    {
+      "path": "product.generic_name",
+      "value": "fictionalmycin",
+      "source": "synthetic_case.IND005.product.generic_name"
+    },
+    {
+      "path": "product.dosage_form",
+      "value": "sterile injectable solution",
+      "source": "synthetic_case.IND005.product.dosage_form"
+    },
+    {
+      "path": "product.route",
+      "value": "intravenous infusion",
+      "source": "synthetic_case.IND005.product.route"
+    },
+    {
+      "path": "product.indication",
+      "value": "heart failure with preserved ejection fraction",
+      "source": "synthetic_case.IND005.product.indication"
+    },
+    {
+      "path": "protocol.protocol_number",
+      "value": "CNV512-102",
+      "source": "synthetic_case.IND005.protocol.protocol_number"
+    },
+    {
+      "path": "protocol.title",
+      "value": "A Phase 2a Study of CNV-512 in Adults with Heart Failure with Preserved Ejection Fraction",
+      "source": "synthetic_case.IND005.protocol.title"
+    },
+    {
+      "path": "protocol.phase",
+      "value": "Phase 2a",
+      "source": "synthetic_case.IND005.protocol.phase"
+    },
+    {
+      "path": "protocol.version",
+      "value": "1.0",
+      "source": "synthetic_case.IND005.protocol.version"
+    },
+    {
+      "path": "protocol.protocol_date",
+      "value": "2026-07-05",
+      "source": "synthetic_case.IND005.protocol.protocol_date"
+    }
+  ],
+  "warnings": [
+    "LLM generation unavailable; used deterministic fallback. Reason: RuntimeError: OPENAI_API_KEY is not set"
+  ]
+}

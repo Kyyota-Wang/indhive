@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FDA Form 1571 POC Field View",
+  "type": "object",
+  "required": ["case_id", "form_name", "fields"],
+  "properties": {
+    "case_id": { "type": "string" },
+    "form_name": { "type": "string" },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field_id", "label", "canonical_path", "status", "value"],
+        "properties": {
+          "field_id": { "type": "string" },
+          "label": { "type": "string" },
+          "canonical_path": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["PASS", "WARNING", "MISSING", "CONFLICT"]
+          },
+          "value": { "type": ["string", "number", "boolean", "null"] },
+          "message": { "type": ["string", "null"] },
+          "provenance": { "type": ["object", "null"] }
+        }
+      }
+    }
+  }
+}

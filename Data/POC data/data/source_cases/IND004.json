@@ -1,0 +1,105 @@
+{
+  "case_id": "IND004",
+  "case_label": "IND004 - RNV-220 clean initial IND",
+  "scenario_type": "clean",
+  "source_records": [
+    {
+      "record_id": "sponsor_profile",
+      "record_type": "sponsor_profile",
+      "title": "Sponsor profile extract",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "sponsor.legal_name": "Renovia Pulmonary Sciences, Inc.",
+        "sponsor.address_line_1": "6200 Lakefront Boulevard",
+        "sponsor.address_line_2": "Floor 4",
+        "sponsor.city": "Madison",
+        "sponsor.state": "WI",
+        "sponsor.postal_code": "53703",
+        "sponsor.country": "USA",
+        "sponsor.contact_name": "Thomas Keane",
+        "sponsor.contact_title": "Head of Regulatory Strategy",
+        "sponsor.phone": "608-555-0194",
+        "sponsor.email": "thomas.keane@renoviaps.example"
+      }
+    },
+    {
+      "record_id": "product_brief",
+      "record_type": "investigational_product_brief",
+      "title": "Investigational product summary",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "product.code_name": "RNV-220",
+        "product.generic_name": null,
+        "product.dosage_form": "metered-dose inhalation aerosol",
+        "product.route": "inhalation",
+        "product.indication": "moderate persistent asthma"
+      }
+    },
+    {
+      "record_id": "protocol_synopsis",
+      "record_type": "clinical_protocol_synopsis",
+      "title": "Protocol RNV220-101 synopsis",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "protocol.protocol_number": "RNV220-101",
+        "protocol.title": "A Phase 1 Study of RNV-220 in Healthy Adult Volunteers",
+        "protocol.phase": "Phase 1",
+        "protocol.version": "1.0",
+        "protocol.protocol_date": "2026-06-28"
+      }
+    },
+    {
+      "record_id": "submission_intake",
+      "record_type": "regulatory_submission_intake",
+      "title": "Initial IND intake worksheet",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "submission.submission_type": "Initial IND",
+        "submission.submission_date": "2026-08-18",
+        "submission.serial_number": "0000",
+        "submission.ind_number": null
+      }
+    },
+    {
+      "record_id": "investigator_profile",
+      "record_type": "principal_investigator_profile",
+      "title": "Principal investigator profile",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "investigator.name": "Nora Stein, MD",
+        "investigator.institution": "Lakeshore Respiratory Research Unit",
+        "investigator.address": "321 Clinical Trials Court, Madison, WI 53705",
+        "investigator.phone": "608-555-0171",
+        "investigator.email": "nora.stein@lrru.example"
+      }
+    },
+    {
+      "record_id": "investigational_plan",
+      "record_type": "general_investigational_plan",
+      "title": "General investigational plan worksheet",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "plan.rationale": "RNV-220 is an inhaled agent intended to provide once-daily control of moderate persistent asthma with lower systemic exposure than currently available oral therapy. Nonclinical inhalation toxicology supports evaluation in humans at the proposed doses.",
+        "plan.general_approach": "A first-in-human study in healthy adult volunteers will establish safety, tolerability and systemic exposure following single and repeat inhaled doses before any study is conducted in participants with asthma.",
+        "plan.first_year_scope": "One Phase 1 single- and multiple-ascending-dose study in healthy adult volunteers is planned in the first year. A patient study is contemplated thereafter but its protocol has not been developed.",
+        "plan.estimated_enrollment": "Approximately 48 healthy adult volunteers across all dose cohorts.",
+        "plan.anticipated_risks": "Anticipated risks of particular severity are bronchospasm following inhaled administration and, at the highest planned doses, the systemic corticosteroid-like effects seen in 13-week dog inhalation toxicology. Spirometry is performed before and after each dose, and rescue medication is available at the site."
+      },
+      "planned_studies": [
+        {
+          "study_id": "RNV220-101",
+          "title": "A Phase 1 Study of RNV-220 in Healthy Adult Volunteers",
+          "objectives": "To evaluate the safety and tolerability of single and multiple ascending inhaled doses of RNV-220 and to characterise systemic pharmacokinetics.",
+          "design": "Randomised, double-blind, placebo-controlled, single- and multiple-ascending-dose study.",
+          "sample_size": "Approximately 48 participants, 8 per cohort randomised 6:2 active to placebo.",
+          "population": "Healthy adults aged 18 to 55 with normal spirometry and no history of reactive airway disease.",
+          "parameters": "Adverse events, spirometry, vital signs, ECG, clinical laboratory tests, and plasma pharmacokinetics.",
+          "status": "Protocol submitted with this Initial IND. Enrolment has not started."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Clean case with inhaled dosage form."
+  ]
+}

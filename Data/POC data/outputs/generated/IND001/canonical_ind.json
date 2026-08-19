@@ -1,0 +1,453 @@
+{
+  "case_id": "IND001",
+  "case_label": "IND001 - AVC-101 clean initial IND",
+  "scenario_type": "clean",
+  "sponsor": {
+    "legal_name": "AsterVale Therapeutics, Inc.",
+    "address_line_1": "4100 Meridian Park Drive",
+    "address_line_2": "Suite 210",
+    "city": "Raleigh",
+    "state": "NC",
+    "postal_code": "27612",
+    "country": "USA",
+    "contact_name": "Maya Ellison",
+    "contact_title": "Vice President, Regulatory Affairs",
+    "phone": "919-555-0142",
+    "email": "maya.ellison@astervale.example"
+  },
+  "product": {
+    "code_name": "AVC-101",
+    "generic_name": null,
+    "dosage_form": "oral capsule",
+    "route": "oral",
+    "indication": "recurrent low-grade serous ovarian cancer"
+  },
+  "protocol": {
+    "protocol_number": "AVC101-101",
+    "title": "A Phase 1 Study of AVC-101 in Participants with Recurrent Low-Grade Serous Ovarian Cancer",
+    "phase": "Phase 1",
+    "version": "1.0",
+    "protocol_date": "2026-07-22"
+  },
+  "submission": {
+    "submission_type": "Initial IND",
+    "submission_date": "2026-08-18",
+    "serial_number": "0000",
+    "ind_number": null
+  },
+  "investigator": {
+    "name": "Elena Ward, MD",
+    "institution": "Piedmont Early Phase Research Institute",
+    "address": "88 Trial Center Way, Durham, NC 27710",
+    "phone": "984-555-0177",
+    "email": "elena.ward@piedmont-epri.example"
+  },
+  "plan": {
+    "rationale": "AVC-101 is an oral small-molecule inhibitor intended to address the limited treatment options for participants with recurrent low-grade serous ovarian cancer, a tumour type that responds poorly to conventional cytotoxic chemotherapy. Nonclinical studies support an acceptable margin between the pharmacologically active exposure and exposures associated with toxicity.",
+    "general_approach": "Development will proceed sequentially. A first-in-human dose-escalation study will characterise safety, tolerability and pharmacokinetics and identify a recommended dose. Expansion at that dose will provide a preliminary assessment of antitumour activity before any decision to proceed to a randomised study.",
+    "first_year_scope": "One Phase 1 dose-escalation study with a dose-expansion component is planned in the first year following submission. No additional clinical studies are planned during that period.",
+    "estimated_enrollment": "Approximately 36 participants (up to 24 in dose escalation and 12 in dose expansion).",
+    "anticipated_risks": "Based on repeat-dose toxicology in rat and dog, the anticipated risks of particular severity are reversible hepatocellular injury observed at exposures above the proposed starting dose, and dose-dependent neutropenia. Liver function tests and absolute neutrophil counts are protocol-specified stopping criteria."
+  },
+  "planned_studies": [
+    {
+      "study_id": "AVC101-101",
+      "title": "A Phase 1 Study of AVC-101 in Participants with Recurrent Low-Grade Serous Ovarian Cancer",
+      "objectives": "To determine the safety, tolerability and maximum tolerated dose of oral AVC-101; to characterise single- and multiple-dose pharmacokinetics; to make a preliminary assessment of antitumour activity.",
+      "design": "Open-label, single-arm, 3+3 dose escalation followed by dose expansion at the recommended dose.",
+      "sample_size": "Up to 36 participants; no formal sample size calculation was performed for this preliminary study.",
+      "population": "Adults with histologically confirmed recurrent low-grade serous ovarian cancer who have received at least one prior line of systemic therapy.",
+      "parameters": "Safety and tolerability by adverse events, laboratory tests, ECG and physical examination. Pharmacokinetic parameters include Cmax, Tmax and AUC. Antitumour activity assessed by RECIST v1.1.",
+      "status": "Protocol submitted with this Initial IND. Enrolment has not started.",
+      "source_record": "investigational_plan"
+    }
+  ],
+  "provenance": {
+    "sponsor.legal_name": {
+      "field": "sponsor.legal_name",
+      "value": "AsterVale Therapeutics, Inc.",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.legal_name"
+        }
+      ]
+    },
+    "sponsor.address_line_1": {
+      "field": "sponsor.address_line_1",
+      "value": "4100 Meridian Park Drive",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_1"
+        }
+      ]
+    },
+    "sponsor.address_line_2": {
+      "field": "sponsor.address_line_2",
+      "value": "Suite 210",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_2"
+        }
+      ]
+    },
+    "sponsor.city": {
+      "field": "sponsor.city",
+      "value": "Raleigh",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.city"
+        }
+      ]
+    },
+    "sponsor.state": {
+      "field": "sponsor.state",
+      "value": "NC",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.state"
+        }
+      ]
+    },
+    "sponsor.postal_code": {
+      "field": "sponsor.postal_code",
+      "value": "27612",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.postal_code"
+        }
+      ]
+    },
+    "sponsor.country": {
+      "field": "sponsor.country",
+      "value": "USA",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.country"
+        }
+      ]
+    },
+    "sponsor.contact_name": {
+      "field": "sponsor.contact_name",
+      "value": "Maya Ellison",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_name"
+        }
+      ]
+    },
+    "sponsor.contact_title": {
+      "field": "sponsor.contact_title",
+      "value": "Vice President, Regulatory Affairs",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_title"
+        }
+      ]
+    },
+    "sponsor.phone": {
+      "field": "sponsor.phone",
+      "value": "919-555-0142",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.phone"
+        }
+      ]
+    },
+    "sponsor.email": {
+      "field": "sponsor.email",
+      "value": "maya.ellison@astervale.example",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.email"
+        }
+      ]
+    },
+    "product.code_name": {
+      "field": "product.code_name",
+      "value": "AVC-101",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.code_name"
+        }
+      ]
+    },
+    "product.generic_name": {
+      "field": "product.generic_name",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.generic_name"
+        }
+      ]
+    },
+    "product.dosage_form": {
+      "field": "product.dosage_form",
+      "value": "oral capsule",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.dosage_form"
+        }
+      ]
+    },
+    "product.route": {
+      "field": "product.route",
+      "value": "oral",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.route"
+        }
+      ]
+    },
+    "product.indication": {
+      "field": "product.indication",
+      "value": "recurrent low-grade serous ovarian cancer",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.indication"
+        }
+      ]
+    },
+    "protocol.protocol_number": {
+      "field": "protocol.protocol_number",
+      "value": "AVC101-101",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_number"
+        }
+      ]
+    },
+    "protocol.title": {
+      "field": "protocol.title",
+      "value": "A Phase 1 Study of AVC-101 in Participants with Recurrent Low-Grade Serous Ovarian Cancer",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.title"
+        }
+      ]
+    },
+    "protocol.phase": {
+      "field": "protocol.phase",
+      "value": "Phase 1",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.phase"
+        }
+      ]
+    },
+    "protocol.version": {
+      "field": "protocol.version",
+      "value": "1.0",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.version"
+        }
+      ]
+    },
+    "protocol.protocol_date": {
+      "field": "protocol.protocol_date",
+      "value": "2026-07-22",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_date"
+        }
+      ]
+    },
+    "submission.submission_type": {
+      "field": "submission.submission_type",
+      "value": "Initial IND",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_type"
+        }
+      ]
+    },
+    "submission.submission_date": {
+      "field": "submission.submission_date",
+      "value": "2026-08-18",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_date"
+        }
+      ]
+    },
+    "submission.serial_number": {
+      "field": "submission.serial_number",
+      "value": "0000",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.serial_number"
+        }
+      ]
+    },
+    "submission.ind_number": {
+      "field": "submission.ind_number",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.ind_number"
+        }
+      ]
+    },
+    "investigator.name": {
+      "field": "investigator.name",
+      "value": "Elena Ward, MD",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.name"
+        }
+      ]
+    },
+    "investigator.institution": {
+      "field": "investigator.institution",
+      "value": "Piedmont Early Phase Research Institute",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.institution"
+        }
+      ]
+    },
+    "investigator.address": {
+      "field": "investigator.address",
+      "value": "88 Trial Center Way, Durham, NC 27710",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.address"
+        }
+      ]
+    },
+    "investigator.phone": {
+      "field": "investigator.phone",
+      "value": "984-555-0177",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.phone"
+        }
+      ]
+    },
+    "investigator.email": {
+      "field": "investigator.email",
+      "value": "elena.ward@piedmont-epri.example",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.email"
+        }
+      ]
+    },
+    "plan.rationale": {
+      "field": "plan.rationale",
+      "value": "AVC-101 is an oral small-molecule inhibitor intended to address the limited treatment options for participants with recurrent low-grade serous ovarian cancer, a tumour type that responds poorly to conventional cytotoxic chemotherapy. Nonclinical studies support an acceptable margin between the pharmacologically active exposure and exposures associated with toxicity.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.rationale"
+        }
+      ]
+    },
+    "plan.general_approach": {
+      "field": "plan.general_approach",
+      "value": "Development will proceed sequentially. A first-in-human dose-escalation study will characterise safety, tolerability and pharmacokinetics and identify a recommended dose. Expansion at that dose will provide a preliminary assessment of antitumour activity before any decision to proceed to a randomised study.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.general_approach"
+        }
+      ]
+    },
+    "plan.first_year_scope": {
+      "field": "plan.first_year_scope",
+      "value": "One Phase 1 dose-escalation study with a dose-expansion component is planned in the first year following submission. No additional clinical studies are planned during that period.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.first_year_scope"
+        }
+      ]
+    },
+    "plan.estimated_enrollment": {
+      "field": "plan.estimated_enrollment",
+      "value": "Approximately 36 participants (up to 24 in dose escalation and 12 in dose expansion).",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.estimated_enrollment"
+        }
+      ]
+    },
+    "plan.anticipated_risks": {
+      "field": "plan.anticipated_risks",
+      "value": "Based on repeat-dose toxicology in rat and dog, the anticipated risks of particular severity are reversible hepatocellular injury observed at exposures above the proposed starting dose, and dose-dependent neutropenia. Liver function tests and absolute neutrophil counts are protocol-specified stopping criteria.",
+      "sources": [
+        {
+          "record_id": "investigational_plan",
+          "source_type": "synthetic_structured_data",
+          "field": "plan.anticipated_risks"
+        }
+      ]
+    }
+  },
+  "conflicts": []
+}

@@ -1,0 +1,117 @@
+{
+  "case_id": "IND003",
+  "document_name": "IND Cover Letter - POC Draft",
+  "generation_method": "template_fallback",
+  "model": null,
+  "text": "# IND Cover Letter - POC Draft\n\n**POC draft for demonstration only. Not FDA-submission-ready.**\n\n2026-08-18\n\nFood and Drug Administration\nCenter for Drug Evaluation and Research\n\nRe: Initial IND for HBG-301\n\nDear FDA Reviewer:\n\n[Sponsor name pending human review] is submitting this POC draft package for HBG-301. This generated document is based only on the selected synthetic IND case.\n\nThe referenced clinical protocol information is: Protocol HBG301-101; A Phase 1/2 Study of HBG-301 in Adults with RDX1-Associated Inherited Retinal Dystrophy; Phase 1/2.\n\nThe POC Module 1 package includes:\n- IND Cover Letter\n- FDA Form 1571 POC Field View\n- Simplified Module 1 Table of Contents\n- Basic validation results\n\nFields requiring human review due to conflicting source values: sponsor.legal_name, protocol.version.\n\nSponsor contact:\nPriya Raman\nSenior Director, Regulatory Affairs\n858-555-0129\npriya.raman@heliobridge.example\n\nSincerely,\nPriya Raman",
+  "facts_used": [
+    {
+      "path": "submission.submission_date",
+      "value": "2026-08-18",
+      "source": "synthetic_case.IND003.submission.submission_date"
+    },
+    {
+      "path": "submission.submission_type",
+      "value": "Initial IND",
+      "source": "synthetic_case.IND003.submission.submission_type"
+    },
+    {
+      "path": "submission.serial_number",
+      "value": "0000",
+      "source": "synthetic_case.IND003.submission.serial_number"
+    },
+    {
+      "path": "sponsor.address_line_1",
+      "value": "990 Harbor Laboratory Lane",
+      "source": "synthetic_case.IND003.sponsor.address_line_1"
+    },
+    {
+      "path": "sponsor.address_line_2",
+      "value": "Building C",
+      "source": "synthetic_case.IND003.sponsor.address_line_2"
+    },
+    {
+      "path": "sponsor.city",
+      "value": "San Diego",
+      "source": "synthetic_case.IND003.sponsor.city"
+    },
+    {
+      "path": "sponsor.state",
+      "value": "CA",
+      "source": "synthetic_case.IND003.sponsor.state"
+    },
+    {
+      "path": "sponsor.postal_code",
+      "value": "92121",
+      "source": "synthetic_case.IND003.sponsor.postal_code"
+    },
+    {
+      "path": "sponsor.country",
+      "value": "USA",
+      "source": "synthetic_case.IND003.sponsor.country"
+    },
+    {
+      "path": "sponsor.contact_name",
+      "value": "Priya Raman",
+      "source": "synthetic_case.IND003.sponsor.contact_name"
+    },
+    {
+      "path": "sponsor.contact_title",
+      "value": "Senior Director, Regulatory Affairs",
+      "source": "synthetic_case.IND003.sponsor.contact_title"
+    },
+    {
+      "path": "sponsor.phone",
+      "value": "858-555-0129",
+      "source": "synthetic_case.IND003.sponsor.phone"
+    },
+    {
+      "path": "sponsor.email",
+      "value": "priya.raman@heliobridge.example",
+      "source": "synthetic_case.IND003.sponsor.email"
+    },
+    {
+      "path": "product.code_name",
+      "value": "HBG-301",
+      "source": "synthetic_case.IND003.product.code_name"
+    },
+    {
+      "path": "product.dosage_form",
+      "value": "subretinal injection",
+      "source": "synthetic_case.IND003.product.dosage_form"
+    },
+    {
+      "path": "product.route",
+      "value": "subretinal",
+      "source": "synthetic_case.IND003.product.route"
+    },
+    {
+      "path": "product.indication",
+      "value": "inherited retinal dystrophy associated with fictional RDX1 variants",
+      "source": "synthetic_case.IND003.product.indication"
+    },
+    {
+      "path": "protocol.protocol_number",
+      "value": "HBG301-101",
+      "source": "synthetic_case.IND003.protocol.protocol_number"
+    },
+    {
+      "path": "protocol.title",
+      "value": "A Phase 1/2 Study of HBG-301 in Adults with RDX1-Associated Inherited Retinal Dystrophy",
+      "source": "synthetic_case.IND003.protocol.title"
+    },
+    {
+      "path": "protocol.phase",
+      "value": "Phase 1/2",
+      "source": "synthetic_case.IND003.protocol.phase"
+    },
+    {
+      "path": "protocol.protocol_date",
+      "value": "2026-07-30",
+      "source": "synthetic_case.IND003.protocol.protocol_date"
+    }
+  ],
+  "warnings": [
+    "LLM generation unavailable; used deterministic fallback. Reason: RuntimeError: OPENAI_API_KEY is not set"
+  ]
+}

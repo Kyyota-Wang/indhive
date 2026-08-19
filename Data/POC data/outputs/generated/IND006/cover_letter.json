@@ -1,0 +1,127 @@
+{
+  "case_id": "IND006",
+  "document_name": "IND Cover Letter - POC Draft",
+  "generation_method": "template_fallback",
+  "model": null,
+  "text": "# IND Cover Letter - POC Draft\n\n**POC draft for demonstration only. Not FDA-submission-ready.**\n\n2026-08-18\n\nFood and Drug Administration\nCenter for Drug Evaluation and Research\n\nRe: Initial IND for GF-088\n\nDear FDA Reviewer:\n\nGlycanForge Bio, Inc. is submitting this POC draft package for GF-088. This generated document is based only on the selected synthetic IND case.\n\nThe referenced clinical protocol information is: Protocol GF088-101; A Phase 1 Randomized Study of GF-088 in Healthy Adult Participants; Phase 1.\n\nThe POC Module 1 package includes:\n- IND Cover Letter\n- FDA Form 1571 POC Field View\n- Simplified Module 1 Table of Contents\n- Basic validation results\n\nSponsor contact:\nOwen Carlisle\nSenior Vice President, Regulatory and Quality\n206-555-0134\nowen.carlisle@glycanforge.example\n\nSincerely,\nOwen Carlisle",
+  "facts_used": [
+    {
+      "path": "submission.submission_date",
+      "value": "2026-08-18",
+      "source": "synthetic_case.IND006.submission.submission_date"
+    },
+    {
+      "path": "submission.submission_type",
+      "value": "Initial IND",
+      "source": "synthetic_case.IND006.submission.submission_type"
+    },
+    {
+      "path": "submission.serial_number",
+      "value": "0000",
+      "source": "synthetic_case.IND006.submission.serial_number"
+    },
+    {
+      "path": "sponsor.legal_name",
+      "value": "GlycanForge Bio, Inc.",
+      "source": "synthetic_case.IND006.sponsor.legal_name"
+    },
+    {
+      "path": "sponsor.address_line_1",
+      "value": "2400 Catalyst Avenue",
+      "source": "synthetic_case.IND006.sponsor.address_line_1"
+    },
+    {
+      "path": "sponsor.address_line_2",
+      "value": "Suite 500",
+      "source": "synthetic_case.IND006.sponsor.address_line_2"
+    },
+    {
+      "path": "sponsor.city",
+      "value": "Seattle",
+      "source": "synthetic_case.IND006.sponsor.city"
+    },
+    {
+      "path": "sponsor.state",
+      "value": "WA",
+      "source": "synthetic_case.IND006.sponsor.state"
+    },
+    {
+      "path": "sponsor.postal_code",
+      "value": "98109",
+      "source": "synthetic_case.IND006.sponsor.postal_code"
+    },
+    {
+      "path": "sponsor.country",
+      "value": "USA",
+      "source": "synthetic_case.IND006.sponsor.country"
+    },
+    {
+      "path": "sponsor.contact_name",
+      "value": "Owen Carlisle",
+      "source": "synthetic_case.IND006.sponsor.contact_name"
+    },
+    {
+      "path": "sponsor.contact_title",
+      "value": "Senior Vice President, Regulatory and Quality",
+      "source": "synthetic_case.IND006.sponsor.contact_title"
+    },
+    {
+      "path": "sponsor.phone",
+      "value": "206-555-0134",
+      "source": "synthetic_case.IND006.sponsor.phone"
+    },
+    {
+      "path": "sponsor.email",
+      "value": "owen.carlisle@glycanforge.example",
+      "source": "synthetic_case.IND006.sponsor.email"
+    },
+    {
+      "path": "product.code_name",
+      "value": "GF-088",
+      "source": "synthetic_case.IND006.product.code_name"
+    },
+    {
+      "path": "product.dosage_form",
+      "value": "prefilled syringe",
+      "source": "synthetic_case.IND006.product.dosage_form"
+    },
+    {
+      "path": "product.route",
+      "value": "subcutaneous",
+      "source": "synthetic_case.IND006.product.route"
+    },
+    {
+      "path": "product.indication",
+      "value": "moderate-to-severe atopic dermatitis",
+      "source": "synthetic_case.IND006.product.indication"
+    },
+    {
+      "path": "protocol.protocol_number",
+      "value": "GF088-101",
+      "source": "synthetic_case.IND006.protocol.protocol_number"
+    },
+    {
+      "path": "protocol.title",
+      "value": "A Phase 1 Randomized Study of GF-088 in Healthy Adult Participants",
+      "source": "synthetic_case.IND006.protocol.title"
+    },
+    {
+      "path": "protocol.phase",
+      "value": "Phase 1",
+      "source": "synthetic_case.IND006.protocol.phase"
+    },
+    {
+      "path": "protocol.version",
+      "value": "1.0",
+      "source": "synthetic_case.IND006.protocol.version"
+    },
+    {
+      "path": "protocol.protocol_date",
+      "value": "2026-07-11",
+      "source": "synthetic_case.IND006.protocol.protocol_date"
+    }
+  ],
+  "warnings": [
+    "LLM generation unavailable; used deterministic fallback. Reason: RuntimeError: OPENAI_API_KEY is not set"
+  ]
+}

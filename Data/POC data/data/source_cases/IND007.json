@@ -1,0 +1,80 @@
+{
+  "case_id": "IND007",
+  "case_label": "IND007 - MCT-19 clean initial IND",
+  "scenario_type": "clean",
+  "source_records": [
+    {
+      "record_id": "sponsor_profile",
+      "record_type": "sponsor_profile",
+      "title": "Sponsor profile extract",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "sponsor.legal_name": "Meridian Cell Therapies, Inc.",
+        "sponsor.address_line_1": "900 Vector Mill Road",
+        "sponsor.address_line_2": "Unit 12",
+        "sponsor.city": "Philadelphia",
+        "sponsor.state": "PA",
+        "sponsor.postal_code": "19104",
+        "sponsor.country": "USA",
+        "sponsor.contact_name": "Hannah Mercer",
+        "sponsor.contact_title": "Vice President, Global Regulatory Affairs",
+        "sponsor.phone": "215-555-0148",
+        "sponsor.email": "hannah.mercer@meridiancell.example"
+      }
+    },
+    {
+      "record_id": "product_brief",
+      "record_type": "investigational_product_brief",
+      "title": "Investigational product summary",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "product.code_name": "MCT-19",
+        "product.generic_name": null,
+        "product.dosage_form": "autologous cell suspension",
+        "product.route": "intravenous infusion",
+        "product.indication": "relapsed or refractory fictional B-cell lymphoma"
+      }
+    },
+    {
+      "record_id": "protocol_synopsis",
+      "record_type": "clinical_protocol_synopsis",
+      "title": "Protocol MCT19-101 synopsis",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "protocol.protocol_number": "MCT19-101",
+        "protocol.title": "A Phase 1 Study of MCT-19 in Adults with Relapsed or Refractory B-Cell Lymphoma",
+        "protocol.phase": "Phase 1",
+        "protocol.version": "1.0",
+        "protocol.protocol_date": "2026-07-18"
+      }
+    },
+    {
+      "record_id": "submission_intake",
+      "record_type": "regulatory_submission_intake",
+      "title": "Initial IND intake worksheet",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "submission.submission_type": "Initial IND",
+        "submission.submission_date": "2026-08-18",
+        "submission.serial_number": "0000",
+        "submission.ind_number": null
+      }
+    },
+    {
+      "record_id": "investigator_profile",
+      "record_type": "principal_investigator_profile",
+      "title": "Principal investigator profile",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "investigator.name": "Caleb Norton, MD",
+        "investigator.institution": "Keystone Hematology Research Hospital",
+        "investigator.address": "14 Discovery Pavilion, Philadelphia, PA 19104",
+        "investigator.phone": "267-555-0181",
+        "investigator.email": "caleb.norton@khrh.example"
+      }
+    }
+  ],
+  "notes": [
+    "Clean case with cell therapy-style investigational product."
+  ]
+}
