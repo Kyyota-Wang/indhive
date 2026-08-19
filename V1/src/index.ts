@@ -7,6 +7,7 @@ type Any = Record<string, any>;
 export interface Env {
   ANTHROPIC_API_KEY: string;
   ASSETS: Fetcher;
+  CHAT_LIMIT?: { limit(options: { key: string }): Promise<{ success: boolean }> };
 }
 
 const MODEL = "claude-opus-5";
@@ -15,19 +16,36 @@ const MAX_TOOL_ROUNDS = 8;
 const MAX_HISTORY = 40;
 const MAX_INPUT_CHARS = 4000;
 
-// Best-effort abuse brake. Worker isolates are ephemeral, so this is a speed
-// bump on a public unauthenticated endpoint, not a real quota. Cloudflare's
-// own rate-limiting rules are the durable layer.
+// Two brakes on a public, unauthenticated endpoint that spends money.
+//
+// The edge binding is the real one: it survives isolate churn and is enforced at
+// the Cloudflare location. It is eventually consistent, so treat it as a backstop
+// against sustained abuse rather than an exact per-minute gate.
+//
+// The in-isolate counter stays as a cheap first pass — it catches a burst from one
+// client hitting one isolate before the edge counter has caught up.
 const HITS = new Map<string, number[]>();
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 20;
 
-function rateLimited(ip: string): boolean {
+function burstLimited(ip: string): boolean {
   const now = Date.now();
   const recent = (HITS.get(ip) || []).filter((t) => now - t < WINDOW_MS);
   recent.push(now);
   HITS.set(ip, recent);
   return recent.length > MAX_PER_WINDOW;
+}
+
+async function rateLimited(env: Env, ip: string): Promise<boolean> {
+  if (burstLimited(ip)) return true;
+  if (!env.CHAT_LIMIT) return false;
+  try {
+    const { success } = await env.CHAT_LIMIT.limit({ key: ip });
+    return !success;
+  } catch {
+    // A limiter that errors must not take the endpoint down with it.
+    return false;
+  }
 }
 
 const json = (data: Any, status = 200) =>
@@ -91,7 +109,7 @@ async function draftCoverLetter(env: Env, caseId: string) {
 
 async function handleChat(request: Request, env: Env): Promise<Response> {
   const ip = request.headers.get("cf-connecting-ip") || "local";
-  if (rateLimited(ip)) {
+  if (await rateLimited(env, ip)) {
     return json({ error: "Too many requests. Wait a minute and try again." }, 429);
   }
   if (!env.ANTHROPIC_API_KEY) {

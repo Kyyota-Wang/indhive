@@ -10,16 +10,27 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
 
-  // Domain. Uncomment once indhive.com is an active zone on this Cloudflare
-  // account — deploy fails if the zone is not there yet. The apex is a custom
-  // domain; www is a plain route so both resolve to the same Worker.
-  //
-  // "routes": [
-  //   { "pattern": "indhive.com", "custom_domain": true },
-  //   { "pattern": "www.indhive.com/*", "zone_name": "indhive.com" }
-  // ]
+  // Keep the workers.dev address alive alongside the custom domains. Declaring
+  // routes turns it off by default, and it is the fallback while a certificate
+  // is still being issued.
+  "workers_dev": true,
+
+  // Edge rate limiting for the one endpoint that costs money. This is eventually
+  // consistent across locations, so it is a backstop against sustained abuse, not
+  // a precise per-minute gate — set it tighter than the effect you want.
+  "ratelimits": [
+    { "name": "CHAT_LIMIT", "namespace_id": "2001", "simple": { "limit": 8, "period": 60 } }
+  ],
+
+  // Both hostnames are custom domains rather than routes. wrangler creates the
+  // DNS records and issues the certificates through the API, so neither needs a
+  // hand-made placeholder AAAA record.
+  "routes": [
+    { "pattern": "indhive.com", "custom_domain": true },
+    { "pattern": "www.indhive.com", "custom_domain": true }
+  ]
 
   // Secret, set once per environment and never committed:
   //   npx wrangler secret put ANTHROPIC_API_KEY
