@@ -146,22 +146,24 @@
 
 </main>
 
-<button id="chat-fab" class="chat-fab" type="button" aria-label="Open the HIVE assistant">
-  <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
-    <path d="M11 4.5 L21 4.5 L26 16 L21 27.5 L11 27.5 L6 16 Z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
-    <circle cx="12.6" cy="16" r="1.6" fill="#fff"/>
-    <circle cx="16" cy="16" r="1.6" fill="#fff"/>
-    <circle cx="19.4" cy="16" r="1.6" fill="#fff"/>
+<button id="chat-fab" class="chat-fab" type="button" aria-label="Ask Iris, the INDHIVE guide">
+  <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true">
+    <path d="M3 6.5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H9.5L5 20.5V16.5H6a3 3 0 0 1-3-3z"
+          fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round"/>
+    <circle cx="8.6" cy="10" r="1.25" fill="#fff"/>
+    <circle cx="12" cy="10" r="1.25" fill="#fff"/>
+    <circle cx="15.4" cy="10" r="1.25" fill="#fff"/>
   </svg>
+  <span class="fab-label">Ask Iris</span>
 </button>
 
-<section id="chat" class="chat-panel" hidden aria-label="HIVE assistant">
+<section id="chat" class="chat-panel" hidden aria-label="Iris, the INDHIVE guide">
   <header class="chat-head">
     <span class="chat-title">
-      <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
         <path d="M8 3.5 L16 3.5 L20 12 L16 20.5 L8 20.5 L4 12 Z" fill="none" stroke="url(#hiveGrad)" stroke-width="1.9" stroke-linejoin="round"/>
       </svg>
-      HIVE assistant
+      <span class="chat-name">Iris<small>INDHIVE guide</small></span>
     </span>
     <button id="chat-close" class="chat-x" type="button" aria-label="Close assistant">
       <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -170,19 +172,14 @@
 
   <div id="log" class="log">
     <div class="msg assistant">
-      <p>I am the guide to this showcase. I can walk you through what went in, what came out, and where the two disagree. Every case fact I state comes from a tool call, not from memory.</p>
+      <p><strong>Hi, I'm Iris.</strong></p>
+      <p>This showcase builds FDA IND <strong>Module 1</strong> documents from sponsor and protocol records.</p>
+      <p>I run that pipeline and explain what comes back. Ask me about any of the ten demo cases. Every fact I give you comes from a tool call, never from memory — and where two source records disagree, I show you both instead of picking one.</p>
+      <p class="hint">New here? Try a question below.</p>
     </div>
   </div>
 
-  <div id="starters" class="starters">
-    <button class="chip" data-ask="What am I looking at?">What am I looking at?</button>
-    <button class="chip" data-ask="Show me the input for IND003, then show me what it produced.">Show me the input</button>
-    <button class="chip" data-ask="Walk me through a clean IND package">Walk me through a clean package</button>
-    <button class="chip" data-ask="Show me a case where the sources disagree">Where do sources disagree?</button>
-    <button class="chip" data-ask="What is missing before IND008 could be filed?">What is still missing?</button>
-    <button class="chip" data-ask="Which sponsor name is the correct one for IND003?">Which value is correct?</button>
-    <button class="chip" data-ask="Can I file IND001 with FDA today?">Can I file this today?</button>
-  </div>
+  <div id="starters" class="starters"></div>
 
   <form id="composer" class="composer">
     <textarea id="input" rows="1" placeholder="Ask about a case, a 1571 box, or what is missing" autocomplete="off"></textarea>

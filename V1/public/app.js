@@ -134,6 +134,44 @@ async function selectCase(id) {
   render();
 }
 
+/* ---------------- starter questions ---------------- */
+
+// Three, and every one of them names the case currently on screen. A chip that
+// says "which value is correct?" without saying which value leaves the assistant
+// guessing at the referent and the reader guessing at what the click will do.
+function starterQuestions(c) {
+  const chips = [
+    { label: "How do I use this?", ask: "What can this platform do, and how do I use this page?" },
+    {
+      label: `How was ${c.case_id} built?`,
+      ask: `Show me how ${c.case_id} was built, from its source records through to the artifacts.`,
+    },
+  ];
+
+  // The refusal only lands on a case that actually has competing values; a clean
+  // case gets a question with a real answer instead.
+  chips.push(
+    c.conflicts.length
+      ? {
+          label: "Which sponsor name is right?",
+          ask: `Which sponsor name is the correct one for ${c.case_id}?`,
+        }
+      : {
+          label: `What would ${c.case_id} still need?`,
+          ask: `What would ${c.case_id} still need before it could be filed?`,
+        },
+  );
+  return chips;
+}
+
+function renderStarters(c) {
+  const el = $("starters");
+  if (state.messages.length) return; // gone for the session once a conversation starts
+  el.innerHTML = starterQuestions(c)
+    .map((q) => `<button class="chip" data-ask="${esc(q.ask)}">${esc(q.label)}</button>`)
+    .join("");
+}
+
 /* ---------------- navigation ---------------- */
 
 function showHome() {
@@ -150,6 +188,8 @@ function showDetail(id) {
 function render() {
   const c = state.current;
   if (!c) return;
+
+  renderStarters(c);
 
   const home = state.view === null;
   $("view-home").hidden = !home;
