@@ -1,5 +1,7 @@
 # INDHIVE
 
+**Live at [indhive.com](https://indhive.com)** · fallback [indhive.pumpkin-ai-v2.workers.dev](https://indhive.pumpkin-ai-v2.workers.dev)
+
 A demonstration of automated FDA IND **Module 1** preparation.
 
 Synthetic sponsor, product, protocol and plan records go in. A deterministic pipeline
@@ -94,9 +96,12 @@ npm run deploy
 Then attach the domain — either add a `routes` entry to `V1/wrangler.jsonc` or set the
 custom domain in the Cloudflare dashboard.
 
-**Before sharing the link widely**, add a Cloudflare rate-limiting rule on `/api/chat`. The
-in-Worker limiter is a speed bump only: Worker isolates are ephemeral, so its counter resets.
-The endpoint is unauthenticated by design.
+`/api/chat` is rate limited at the edge by the `CHAT_LIMIT` binding declared in
+`wrangler.jsonc` (8 requests / 60s per IP), backed by an in-isolate burst counter. Edge
+limits are eventually consistent, so treat them as a backstop against sustained abuse
+rather than an exact gate. The endpoint is unauthenticated by design.
+
+Full deployment procedure, verification checklist and rollback points: [DEPLOY.md](DEPLOY.md).
 
 ## Not built
 
