@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical IND Data",
+  "type": "object",
+  "required": [
+    "case_id",
+    "case_label",
+    "scenario_type",
+    "sponsor",
+    "product",
+    "protocol",
+    "submission",
+    "investigator",
+    "provenance",
+    "conflicts"
+  ],
+  "properties": {
+    "case_id": { "type": "string" },
+    "case_label": { "type": "string" },
+    "scenario_type": { "type": "string" },
+    "sponsor": { "$ref": "#/$defs/sponsor" },
+    "product": { "$ref": "#/$defs/product" },
+    "protocol": { "$ref": "#/$defs/protocol" },
+    "submission": { "$ref": "#/$defs/submission" },
+    "investigator": { "$ref": "#/$defs/investigator" },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/provenance_entry" }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/conflict" }
+    }
+  },
+  "$defs": {
+    "nullable_string": { "type": ["string", "null"] },
+    "sponsor": {
+      "type": "object",
+      "properties": {
+        "legal_name": { "$ref": "#/$defs/nullable_string" },
+        "address_line_1": { "$ref": "#/$defs/nullable_string" },
+        "address_line_2": { "$ref": "#/$defs/nullable_string" },
+        "city": { "$ref": "#/$defs/nullable_string" },
+        "state": { "$ref": "#/$defs/nullable_string" },
+        "postal_code": { "$ref": "#/$defs/nullable_string" },
+        "country": { "$ref": "#/$defs/nullable_string" },
+        "contact_name": { "$ref": "#/$defs/nullable_string" },
+        "contact_title": { "$ref": "#/$defs/nullable_string" },
+        "phone": { "$ref": "#/$defs/nullable_string" },
+        "email": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "product": {
+      "type": "object",
+      "properties": {
+        "code_name": { "$ref": "#/$defs/nullable_string" },
+        "generic_name": { "$ref": "#/$defs/nullable_string" },
+        "dosage_form": { "$ref": "#/$defs/nullable_string" },
+        "route": { "$ref": "#/$defs/nullable_string" },
+        "indication": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "protocol": {
+      "type": "object",
+      "properties": {
+        "protocol_number": { "$ref": "#/$defs/nullable_string" },
+        "title": { "$ref": "#/$defs/nullable_string" },
+        "phase": { "$ref": "#/$defs/nullable_string" },
+        "version": { "$ref": "#/$defs/nullable_string" },
+        "protocol_date": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "submission": {
+      "type": "object",
+      "properties": {
+        "submission_type": { "$ref": "#/$defs/nullable_string" },
+        "submission_date": { "$ref": "#/$defs/nullable_string" },
+        "serial_number": { "$ref": "#/$defs/nullable_string" },
+        "ind_number": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "investigator": {
+      "type": "object",
+      "properties": {
+        "name": { "$ref": "#/$defs/nullable_string" },
+        "institution": { "$ref": "#/$defs/nullable_string" },
+        "address": { "$ref": "#/$defs/nullable_string" },
+        "phone": { "$ref": "#/$defs/nullable_string" },
+        "email": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "provenance_entry": {
+      "type": "object",
+      "required": ["field", "value", "sources"],
+      "properties": {
+        "field": { "type": "string" },
+        "value": { "type": ["string", "number", "boolean", "null"] },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["record_id", "source_type", "field"],
+            "properties": {
+              "record_id": { "type": "string" },
+              "source_type": { "type": "string" },
+              "field": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "conflict": {
+      "type": "object",
+      "required": ["field", "values", "message"],
+      "properties": {
+        "field": { "type": "string" },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["value", "record_id"],
+            "properties": {
+              "value": { "type": ["string", "number", "boolean", "null"] },
+              "record_id": { "type": "string" },
+              "source_type": { "type": "string" }
+            }
+          }
+        },
+        "message": { "type": "string" }
+      }
+    }
+  }
+}

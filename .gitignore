@@ -1,0 +1,30 @@
+# Secrets — never commit. Production uses `wrangler secret put`.
+.dev.vars
+V1/.dev.vars
+
+# Dependencies and build caches
+node_modules/
+V1/.wrangler/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Reference document: a 153 MB FOIA-released FDA review file (IND 36,357).
+# Too large for GitHub and not needed to build or run anything here.
+Data/*.pdf
+
+# Git metadata from the tool that first scaffolded the pipeline folder
+.git.codex-bak/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,90 @@
+{
+  "case_id": "IND003",
+  "case_label": "IND003 - HBG-301 conflict case",
+  "scenario_type": "conflict",
+  "source_records": [
+    {
+      "record_id": "sponsor_profile",
+      "record_type": "sponsor_profile",
+      "title": "Sponsor profile extract",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "sponsor.legal_name": "HelioBridge Gene Medicines, Inc.",
+        "sponsor.address_line_1": "990 Harbor Laboratory Lane",
+        "sponsor.address_line_2": "Building C",
+        "sponsor.city": "San Diego",
+        "sponsor.state": "CA",
+        "sponsor.postal_code": "92121",
+        "sponsor.country": "USA",
+        "sponsor.contact_name": "Priya Raman",
+        "sponsor.contact_title": "Senior Director, Regulatory Affairs",
+        "sponsor.phone": "858-555-0129",
+        "sponsor.email": "priya.raman@heliobridge.example"
+      }
+    },
+    {
+      "record_id": "draft_form_1571_tracker",
+      "record_type": "draft_form_1571_tracker",
+      "title": "Draft Form 1571 tracking sheet",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "sponsor.legal_name": "HelioBridge Therapeutics Incorporated",
+        "protocol.version": "1.1"
+      }
+    },
+    {
+      "record_id": "product_brief",
+      "record_type": "investigational_product_brief",
+      "title": "Investigational product summary",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "product.code_name": "HBG-301",
+        "product.generic_name": null,
+        "product.dosage_form": "subretinal injection",
+        "product.route": "subretinal",
+        "product.indication": "inherited retinal dystrophy associated with fictional RDX1 variants"
+      }
+    },
+    {
+      "record_id": "protocol_synopsis",
+      "record_type": "clinical_protocol_synopsis",
+      "title": "Protocol HBG301-101 synopsis",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "protocol.protocol_number": "HBG301-101",
+        "protocol.title": "A Phase 1/2 Study of HBG-301 in Adults with RDX1-Associated Inherited Retinal Dystrophy",
+        "protocol.phase": "Phase 1/2",
+        "protocol.version": "1.0",
+        "protocol.protocol_date": "2026-07-30"
+      }
+    },
+    {
+      "record_id": "submission_intake",
+      "record_type": "regulatory_submission_intake",
+      "title": "Initial IND intake worksheet",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "submission.submission_type": "Initial IND",
+        "submission.submission_date": "2026-08-18",
+        "submission.serial_number": "0000",
+        "submission.ind_number": null
+      }
+    },
+    {
+      "record_id": "investigator_profile",
+      "record_type": "principal_investigator_profile",
+      "title": "Principal investigator profile",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "investigator.name": "Marcus Chen, MD, PhD",
+        "investigator.institution": "Pacific Vision Clinical Research Center",
+        "investigator.address": "602 Retina Park Avenue, La Jolla, CA 92037",
+        "investigator.phone": "619-555-0155",
+        "investigator.email": "marcus.chen@pvcrc.example"
+      }
+    }
+  ],
+  "notes": [
+    "Golden conflict case. Sponsor legal name and protocol version differ across simulated source records."
+  ]
+}

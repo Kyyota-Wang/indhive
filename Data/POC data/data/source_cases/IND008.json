@@ -1,0 +1,80 @@
+{
+  "case_id": "IND008",
+  "case_label": "IND008 - ARD-77 missing required date",
+  "scenario_type": "missing",
+  "source_records": [
+    {
+      "record_id": "sponsor_profile",
+      "record_type": "sponsor_profile",
+      "title": "Sponsor profile extract",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "sponsor.legal_name": "Ardena Rare Disease Labs, Inc.",
+        "sponsor.address_line_1": "3300 Orchard Science Parkway",
+        "sponsor.address_line_2": "Suite 140",
+        "sponsor.city": "Columbus",
+        "sponsor.state": "OH",
+        "sponsor.postal_code": "43210",
+        "sponsor.country": "USA",
+        "sponsor.contact_name": "Iris Nakamura",
+        "sponsor.contact_title": "Director, Regulatory Operations",
+        "sponsor.phone": "614-555-0131",
+        "sponsor.email": "iris.nakamura@ardenard.example"
+      }
+    },
+    {
+      "record_id": "product_brief",
+      "record_type": "investigational_product_brief",
+      "title": "Investigational product summary",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "product.code_name": "ARD-77",
+        "product.generic_name": null,
+        "product.dosage_form": "oral solution",
+        "product.route": "oral",
+        "product.indication": "fictional pediatric lysosomal storage disorder"
+      }
+    },
+    {
+      "record_id": "protocol_synopsis",
+      "record_type": "clinical_protocol_synopsis",
+      "title": "Protocol ARD77-101 synopsis",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "protocol.protocol_number": "ARD77-101",
+        "protocol.title": "A Phase 1/2 Study of ARD-77 in Pediatric Participants with a Fictional Lysosomal Storage Disorder",
+        "protocol.phase": "Phase 1/2",
+        "protocol.version": "0.8",
+        "protocol.protocol_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "submission_intake",
+      "record_type": "regulatory_submission_intake",
+      "title": "Initial IND intake worksheet",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "submission.submission_type": "Initial IND",
+        "submission.submission_date": null,
+        "submission.serial_number": "0000",
+        "submission.ind_number": null
+      }
+    },
+    {
+      "record_id": "investigator_profile",
+      "record_type": "principal_investigator_profile",
+      "title": "Principal investigator profile",
+      "source_type": "synthetic_structured_data",
+      "fields": {
+        "investigator.name": "Julia Moreno, MD",
+        "investigator.institution": "Midwest Pediatric Translational Research Center",
+        "investigator.address": "801 Children's Research Drive, Columbus, OH 43205",
+        "investigator.phone": "614-555-0174",
+        "investigator.email": "julia.moreno@mptrc.example"
+      }
+    }
+  ],
+  "notes": [
+    "Missing case with unavailable submission date to demonstrate a required MISSING validation status."
+  ]
+}

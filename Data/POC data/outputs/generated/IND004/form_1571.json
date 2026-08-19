@@ -1,0 +1,709 @@
+{
+  "case_id": "IND004",
+  "form_name": "FDA Form 1571 - POC Field View",
+  "fields": [
+    {
+      "field_id": "submission_type",
+      "kind": "value",
+      "box": "11",
+      "box_label": "This submission contains",
+      "context": false,
+      "label": "Submission Type",
+      "canonical_path": "submission.submission_type",
+      "status": "PASS",
+      "value": "Initial IND",
+      "message": null,
+      "provenance": {
+        "field": "submission.submission_type",
+        "value": "Initial IND",
+        "sources": [
+          {
+            "record_id": "submission_intake",
+            "source_type": "synthetic_structured_data",
+            "field": "submission.submission_type"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "submission_date",
+      "kind": "value",
+      "box": "2",
+      "box_label": "Date of submission",
+      "context": false,
+      "label": "Submission Date",
+      "canonical_path": "submission.submission_date",
+      "status": "PASS",
+      "value": "2026-08-18",
+      "message": null,
+      "provenance": {
+        "field": "submission.submission_date",
+        "value": "2026-08-18",
+        "sources": [
+          {
+            "record_id": "submission_intake",
+            "source_type": "synthetic_structured_data",
+            "field": "submission.submission_date"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "serial_number",
+      "kind": "value",
+      "box": "10",
+      "box_label": "Serial number",
+      "context": false,
+      "label": "Serial Number",
+      "canonical_path": "submission.serial_number",
+      "status": "PASS",
+      "value": "0000",
+      "message": null,
+      "provenance": {
+        "field": "submission.serial_number",
+        "value": "0000",
+        "sources": [
+          {
+            "record_id": "submission_intake",
+            "source_type": "synthetic_structured_data",
+            "field": "submission.serial_number"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "ind_number",
+      "kind": "value",
+      "box": "6",
+      "box_label": "IND number",
+      "context": false,
+      "label": "IND Number",
+      "canonical_path": "submission.ind_number",
+      "status": "WARNING",
+      "value": null,
+      "message": "Optional value is unavailable.",
+      "provenance": {
+        "field": "submission.ind_number",
+        "value": null,
+        "sources": [
+          {
+            "record_id": "submission_intake",
+            "source_type": "synthetic_structured_data",
+            "field": "submission.ind_number"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_name",
+      "kind": "value",
+      "box": "1",
+      "box_label": "Name of sponsor",
+      "context": false,
+      "label": "Sponsor Name",
+      "canonical_path": "sponsor.legal_name",
+      "status": "PASS",
+      "value": "Renovia Pulmonary Sciences, Inc.",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.legal_name",
+        "value": "Renovia Pulmonary Sciences, Inc.",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.legal_name"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_address_line_1",
+      "kind": "value",
+      "box": "3",
+      "box_label": "Address",
+      "context": false,
+      "label": "Sponsor Address Line 1",
+      "canonical_path": "sponsor.address_line_1",
+      "status": "PASS",
+      "value": "6200 Lakefront Boulevard",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.address_line_1",
+        "value": "6200 Lakefront Boulevard",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.address_line_1"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_address_line_2",
+      "kind": "value",
+      "box": "3",
+      "box_label": "Address",
+      "context": false,
+      "label": "Sponsor Address Line 2",
+      "canonical_path": "sponsor.address_line_2",
+      "status": "PASS",
+      "value": "Floor 4",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.address_line_2",
+        "value": "Floor 4",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.address_line_2"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_city",
+      "kind": "value",
+      "box": "3",
+      "box_label": "Address",
+      "context": false,
+      "label": "Sponsor City",
+      "canonical_path": "sponsor.city",
+      "status": "PASS",
+      "value": "Madison",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.city",
+        "value": "Madison",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.city"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_state",
+      "kind": "value",
+      "box": "3",
+      "box_label": "Address",
+      "context": false,
+      "label": "Sponsor State",
+      "canonical_path": "sponsor.state",
+      "status": "PASS",
+      "value": "WI",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.state",
+        "value": "WI",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.state"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_postal_code",
+      "kind": "value",
+      "box": "3",
+      "box_label": "Address",
+      "context": false,
+      "label": "Sponsor Postal Code",
+      "canonical_path": "sponsor.postal_code",
+      "status": "PASS",
+      "value": "53703",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.postal_code",
+        "value": "53703",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.postal_code"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_country",
+      "kind": "value",
+      "box": "3",
+      "box_label": "Address",
+      "context": false,
+      "label": "Sponsor Country",
+      "canonical_path": "sponsor.country",
+      "status": "PASS",
+      "value": "USA",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.country",
+        "value": "USA",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.country"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_contact_name",
+      "kind": "value",
+      "box": "14",
+      "box_label": "Person responsible for monitoring the investigations",
+      "context": false,
+      "label": "Sponsor Contact Name",
+      "canonical_path": "sponsor.contact_name",
+      "status": "PASS",
+      "value": "Thomas Keane",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.contact_name",
+        "value": "Thomas Keane",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.contact_name"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_contact_title",
+      "kind": "value",
+      "box": "14",
+      "box_label": "Person responsible for monitoring the investigations",
+      "context": false,
+      "label": "Sponsor Contact Title",
+      "canonical_path": "sponsor.contact_title",
+      "status": "PASS",
+      "value": "Head of Regulatory Strategy",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.contact_title",
+        "value": "Head of Regulatory Strategy",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.contact_title"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_phone",
+      "kind": "value",
+      "box": "4",
+      "box_label": "Telephone number",
+      "context": false,
+      "label": "Sponsor Phone",
+      "canonical_path": "sponsor.phone",
+      "status": "PASS",
+      "value": "608-555-0194",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.phone",
+        "value": "608-555-0194",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.phone"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "sponsor_email",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Sponsor Email",
+      "canonical_path": "sponsor.email",
+      "status": "PASS",
+      "value": "thomas.keane@renoviaps.example",
+      "message": null,
+      "provenance": {
+        "field": "sponsor.email",
+        "value": "thomas.keane@renoviaps.example",
+        "sources": [
+          {
+            "record_id": "sponsor_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "sponsor.email"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "investigational_product",
+      "kind": "value",
+      "box": "5",
+      "box_label": "Name(s) of drug",
+      "context": false,
+      "label": "Investigational Product",
+      "canonical_path": "product.code_name",
+      "status": "PASS",
+      "value": "RNV-220",
+      "message": null,
+      "provenance": {
+        "field": "product.code_name",
+        "value": "RNV-220",
+        "sources": [
+          {
+            "record_id": "product_brief",
+            "source_type": "synthetic_structured_data",
+            "field": "product.code_name"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "generic_name",
+      "kind": "value",
+      "box": "5",
+      "box_label": "Name(s) of drug",
+      "context": false,
+      "label": "Generic Name",
+      "canonical_path": "product.generic_name",
+      "status": "WARNING",
+      "value": null,
+      "message": "Optional value is unavailable.",
+      "provenance": {
+        "field": "product.generic_name",
+        "value": null,
+        "sources": [
+          {
+            "record_id": "product_brief",
+            "source_type": "synthetic_structured_data",
+            "field": "product.generic_name"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "dosage_form",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Dosage Form",
+      "canonical_path": "product.dosage_form",
+      "status": "PASS",
+      "value": "metered-dose inhalation aerosol",
+      "message": null,
+      "provenance": {
+        "field": "product.dosage_form",
+        "value": "metered-dose inhalation aerosol",
+        "sources": [
+          {
+            "record_id": "product_brief",
+            "source_type": "synthetic_structured_data",
+            "field": "product.dosage_form"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "route",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Route of Administration",
+      "canonical_path": "product.route",
+      "status": "PASS",
+      "value": "inhalation",
+      "message": null,
+      "provenance": {
+        "field": "product.route",
+        "value": "inhalation",
+        "sources": [
+          {
+            "record_id": "product_brief",
+            "source_type": "synthetic_structured_data",
+            "field": "product.route"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "indication",
+      "kind": "value",
+      "box": "7",
+      "box_label": "Indication(s)",
+      "context": false,
+      "label": "Indication",
+      "canonical_path": "product.indication",
+      "status": "PASS",
+      "value": "moderate persistent asthma",
+      "message": null,
+      "provenance": {
+        "field": "product.indication",
+        "value": "moderate persistent asthma",
+        "sources": [
+          {
+            "record_id": "product_brief",
+            "source_type": "synthetic_structured_data",
+            "field": "product.indication"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "study_phase",
+      "kind": "value",
+      "box": "8",
+      "box_label": "Phase(s) of clinical investigation",
+      "context": false,
+      "label": "Study Phase",
+      "canonical_path": "protocol.phase",
+      "status": "PASS",
+      "value": "Phase 1",
+      "message": null,
+      "provenance": {
+        "field": "protocol.phase",
+        "value": "Phase 1",
+        "sources": [
+          {
+            "record_id": "protocol_synopsis",
+            "source_type": "synthetic_structured_data",
+            "field": "protocol.phase"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "protocol_number",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Protocol Number",
+      "canonical_path": "protocol.protocol_number",
+      "status": "PASS",
+      "value": "RNV220-101",
+      "message": null,
+      "provenance": {
+        "field": "protocol.protocol_number",
+        "value": "RNV220-101",
+        "sources": [
+          {
+            "record_id": "protocol_synopsis",
+            "source_type": "synthetic_structured_data",
+            "field": "protocol.protocol_number"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "protocol_title",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Protocol Title",
+      "canonical_path": "protocol.title",
+      "status": "PASS",
+      "value": "A Phase 1 Study of RNV-220 in Healthy Adult Volunteers",
+      "message": null,
+      "provenance": {
+        "field": "protocol.title",
+        "value": "A Phase 1 Study of RNV-220 in Healthy Adult Volunteers",
+        "sources": [
+          {
+            "record_id": "protocol_synopsis",
+            "source_type": "synthetic_structured_data",
+            "field": "protocol.title"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "protocol_version",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Protocol Version",
+      "canonical_path": "protocol.version",
+      "status": "PASS",
+      "value": "1.0",
+      "message": null,
+      "provenance": {
+        "field": "protocol.version",
+        "value": "1.0",
+        "sources": [
+          {
+            "record_id": "protocol_synopsis",
+            "source_type": "synthetic_structured_data",
+            "field": "protocol.version"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "protocol_date",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Protocol Date",
+      "canonical_path": "protocol.protocol_date",
+      "status": "PASS",
+      "value": "2026-06-28",
+      "message": null,
+      "provenance": {
+        "field": "protocol.protocol_date",
+        "value": "2026-06-28",
+        "sources": [
+          {
+            "record_id": "protocol_synopsis",
+            "source_type": "synthetic_structured_data",
+            "field": "protocol.protocol_date"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "investigator_name",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Principal Investigator",
+      "canonical_path": "investigator.name",
+      "status": "PASS",
+      "value": "Nora Stein, MD",
+      "message": null,
+      "provenance": {
+        "field": "investigator.name",
+        "value": "Nora Stein, MD",
+        "sources": [
+          {
+            "record_id": "investigator_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "investigator.name"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "investigator_institution",
+      "kind": "value",
+      "box": null,
+      "box_label": null,
+      "context": true,
+      "label": "Investigator Institution",
+      "canonical_path": "investigator.institution",
+      "status": "PASS",
+      "value": "Lakeshore Respiratory Research Unit",
+      "message": null,
+      "provenance": {
+        "field": "investigator.institution",
+        "value": "Lakeshore Respiratory Research Unit",
+        "sources": [
+          {
+            "record_id": "investigator_profile",
+            "source_type": "synthetic_structured_data",
+            "field": "investigator.institution"
+          }
+        ]
+      }
+    },
+    {
+      "field_id": "referenced_applications",
+      "kind": "value",
+      "box": "9",
+      "box_label": "Numbers of referenced applications",
+      "context": false,
+      "label": "Numbers of all INDs, NDAs, DMFs and BLAs referred to in this application",
+      "canonical_path": null,
+      "status": "PASS",
+      "value": "None",
+      "message": "Derived: no source record supplies a referenced application number.",
+      "provenance": null
+    },
+    {
+      "field_id": "contents_of_application",
+      "kind": "checklist",
+      "box": "12",
+      "box_label": "Contents of application",
+      "context": false,
+      "label": "This application contains the following items",
+      "canonical_path": null,
+      "status": "PASS",
+      "value": "3 of 9 items present",
+      "items": [
+        {
+          "number": "1",
+          "label": "Form FDA 1571",
+          "checked": true,
+          "note": "Generated by this POC."
+        },
+        {
+          "number": "2",
+          "label": "Table of contents",
+          "checked": true,
+          "note": "Generated by this POC."
+        },
+        {
+          "number": "3",
+          "label": "Introductory statement and general investigational plan",
+          "checked": true,
+          "note": "Section 1.20 is complete."
+        },
+        {
+          "number": "5",
+          "label": "Investigator's brochure",
+          "checked": false,
+          "note": "No generator for this content class in this POC."
+        },
+        {
+          "number": "6",
+          "label": "Protocol(s)",
+          "checked": false,
+          "note": "No generator for this content class in this POC."
+        },
+        {
+          "number": "7",
+          "label": "Chemistry, manufacturing and control data",
+          "checked": false,
+          "note": "No generator for this content class in this POC."
+        },
+        {
+          "number": "8",
+          "label": "Pharmacology and toxicology data",
+          "checked": false,
+          "note": "No generator for this content class in this POC."
+        },
+        {
+          "number": "9",
+          "label": "Previous human experience",
+          "checked": false,
+          "note": "No generator for this content class in this POC."
+        },
+        {
+          "number": "10",
+          "label": "Additional information",
+          "checked": false,
+          "note": "No generator for this content class in this POC."
+        }
+      ],
+      "message": "Item 4 is reserved on the current form and is not shown.",
+      "provenance": null
+    }
+  ]
+}

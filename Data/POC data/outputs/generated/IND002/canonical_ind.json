@@ -1,0 +1,411 @@
+{
+  "case_id": "IND002",
+  "case_label": "IND002 - NLX-204 missing fields",
+  "scenario_type": "missing",
+  "sponsor": {
+    "legal_name": "NeuroLumen Biopharma, Inc.",
+    "address_line_1": "275 Discovery Square",
+    "address_line_2": null,
+    "city": "Cambridge",
+    "state": "MA",
+    "postal_code": "02139",
+    "country": "USA",
+    "contact_name": "Jordan Patel",
+    "contact_title": null,
+    "phone": "617-555-0186",
+    "email": "jordan.patel@neurolumen.example"
+  },
+  "product": {
+    "code_name": "NLX-204",
+    "generic_name": null,
+    "dosage_form": "intravenous solution",
+    "route": "intravenous",
+    "indication": "acute ischemic stroke"
+  },
+  "protocol": {
+    "protocol_number": "NLX204-101",
+    "title": "A Phase 1b Study of NLX-204 in Adults with Recent Acute Ischemic Stroke",
+    "phase": "Phase 1b",
+    "version": "0.9",
+    "protocol_date": null
+  },
+  "submission": {
+    "submission_type": "Initial IND",
+    "submission_date": "2026-08-18",
+    "serial_number": "0000",
+    "ind_number": null
+  },
+  "investigator": {
+    "name": "Lena Brooks, MD",
+    "institution": "Harborview Translational Research Center",
+    "address": "144 Beacon Research Road, Boston, MA 02215",
+    "phone": "857-555-0108",
+    "email": null
+  },
+  "plan": {
+    "rationale": null,
+    "general_approach": null,
+    "first_year_scope": null,
+    "estimated_enrollment": null,
+    "anticipated_risks": null
+  },
+  "planned_studies": [],
+  "provenance": {
+    "sponsor.legal_name": {
+      "field": "sponsor.legal_name",
+      "value": "NeuroLumen Biopharma, Inc.",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.legal_name"
+        }
+      ]
+    },
+    "sponsor.address_line_1": {
+      "field": "sponsor.address_line_1",
+      "value": "275 Discovery Square",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_1"
+        }
+      ]
+    },
+    "sponsor.address_line_2": {
+      "field": "sponsor.address_line_2",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.address_line_2"
+        }
+      ]
+    },
+    "sponsor.city": {
+      "field": "sponsor.city",
+      "value": "Cambridge",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.city"
+        }
+      ]
+    },
+    "sponsor.state": {
+      "field": "sponsor.state",
+      "value": "MA",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.state"
+        }
+      ]
+    },
+    "sponsor.postal_code": {
+      "field": "sponsor.postal_code",
+      "value": "02139",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.postal_code"
+        }
+      ]
+    },
+    "sponsor.country": {
+      "field": "sponsor.country",
+      "value": "USA",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.country"
+        }
+      ]
+    },
+    "sponsor.contact_name": {
+      "field": "sponsor.contact_name",
+      "value": "Jordan Patel",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_name"
+        }
+      ]
+    },
+    "sponsor.contact_title": {
+      "field": "sponsor.contact_title",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.contact_title"
+        }
+      ]
+    },
+    "sponsor.phone": {
+      "field": "sponsor.phone",
+      "value": "617-555-0186",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.phone"
+        }
+      ]
+    },
+    "sponsor.email": {
+      "field": "sponsor.email",
+      "value": "jordan.patel@neurolumen.example",
+      "sources": [
+        {
+          "record_id": "sponsor_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "sponsor.email"
+        }
+      ]
+    },
+    "product.code_name": {
+      "field": "product.code_name",
+      "value": "NLX-204",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.code_name"
+        }
+      ]
+    },
+    "product.generic_name": {
+      "field": "product.generic_name",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.generic_name"
+        }
+      ]
+    },
+    "product.dosage_form": {
+      "field": "product.dosage_form",
+      "value": "intravenous solution",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.dosage_form"
+        }
+      ]
+    },
+    "product.route": {
+      "field": "product.route",
+      "value": "intravenous",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.route"
+        }
+      ]
+    },
+    "product.indication": {
+      "field": "product.indication",
+      "value": "acute ischemic stroke",
+      "sources": [
+        {
+          "record_id": "product_brief",
+          "source_type": "synthetic_structured_data",
+          "field": "product.indication"
+        }
+      ]
+    },
+    "protocol.protocol_number": {
+      "field": "protocol.protocol_number",
+      "value": "NLX204-101",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_number"
+        }
+      ]
+    },
+    "protocol.title": {
+      "field": "protocol.title",
+      "value": "A Phase 1b Study of NLX-204 in Adults with Recent Acute Ischemic Stroke",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.title"
+        }
+      ]
+    },
+    "protocol.phase": {
+      "field": "protocol.phase",
+      "value": "Phase 1b",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.phase"
+        }
+      ]
+    },
+    "protocol.version": {
+      "field": "protocol.version",
+      "value": "0.9",
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.version"
+        }
+      ]
+    },
+    "protocol.protocol_date": {
+      "field": "protocol.protocol_date",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "protocol_synopsis",
+          "source_type": "synthetic_structured_data",
+          "field": "protocol.protocol_date"
+        }
+      ]
+    },
+    "submission.submission_type": {
+      "field": "submission.submission_type",
+      "value": "Initial IND",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_type"
+        }
+      ]
+    },
+    "submission.submission_date": {
+      "field": "submission.submission_date",
+      "value": "2026-08-18",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.submission_date"
+        }
+      ]
+    },
+    "submission.serial_number": {
+      "field": "submission.serial_number",
+      "value": "0000",
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.serial_number"
+        }
+      ]
+    },
+    "submission.ind_number": {
+      "field": "submission.ind_number",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "submission_intake",
+          "source_type": "synthetic_structured_data",
+          "field": "submission.ind_number"
+        }
+      ]
+    },
+    "investigator.name": {
+      "field": "investigator.name",
+      "value": "Lena Brooks, MD",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.name"
+        }
+      ]
+    },
+    "investigator.institution": {
+      "field": "investigator.institution",
+      "value": "Harborview Translational Research Center",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.institution"
+        }
+      ]
+    },
+    "investigator.address": {
+      "field": "investigator.address",
+      "value": "144 Beacon Research Road, Boston, MA 02215",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.address"
+        }
+      ]
+    },
+    "investigator.phone": {
+      "field": "investigator.phone",
+      "value": "857-555-0108",
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.phone"
+        }
+      ]
+    },
+    "investigator.email": {
+      "field": "investigator.email",
+      "value": null,
+      "sources": [
+        {
+          "record_id": "investigator_profile",
+          "source_type": "synthetic_structured_data",
+          "field": "investigator.email"
+        }
+      ]
+    },
+    "plan.rationale": {
+      "field": "plan.rationale",
+      "value": null,
+      "sources": []
+    },
+    "plan.general_approach": {
+      "field": "plan.general_approach",
+      "value": null,
+      "sources": []
+    },
+    "plan.first_year_scope": {
+      "field": "plan.first_year_scope",
+      "value": null,
+      "sources": []
+    },
+    "plan.estimated_enrollment": {
+      "field": "plan.estimated_enrollment",
+      "value": null,
+      "sources": []
+    },
+    "plan.anticipated_risks": {
+      "field": "plan.anticipated_risks",
+      "value": null,
+      "sources": []
+    }
+  },
+  "conflicts": []
+}

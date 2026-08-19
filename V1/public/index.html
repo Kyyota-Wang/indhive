@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INDHIVE — Module 1 demonstration</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="hiveGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B4C86"/>
+      <stop offset="0.55" stop-color="#1C8FA8"/>
+      <stop offset="1" stop-color="#25B884"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <button class="logo" id="home-link" type="button" aria-label="INDHIVE home">
+    <svg class="logomark" viewBox="0 0 48 44" aria-hidden="true">
+      <path d="M17 5.5 L33 5.5 L42 22 L33 38.5 L17 38.5 L8 22 Z"
+            fill="none" stroke="url(#hiveGrad)" stroke-width="2.6" stroke-linejoin="round"/>
+      <rect x="19" y="12" width="15" height="19" rx="2.5" fill="#fff" stroke="#1B4C86" stroke-width="1.5"/>
+      <path d="M22 17h9M22 20.5h9M22 24h6" stroke="#1B4C86" stroke-width="1.3" stroke-linecap="round"/>
+      <circle cx="6.5" cy="15" r="3.2" fill="none" stroke="#1C8FA8" stroke-width="1.6"/>
+      <circle cx="7.5" cy="26" r="3.6" fill="#2C6FA8"/>
+      <circle cx="13" cy="31.5" r="2.4" fill="#1B4C86"/>
+      <path d="M27 31v4.5M31 31v3M27 35.5h-2.5" stroke="#25B884" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="31" cy="34.5" r="1.7" fill="#25B884"/>
+      <circle cx="24" cy="35.5" r="1.7" fill="#25B884"/>
+    </svg>
+    <span class="wordmark"><span class="w1">IND</span><span class="w2">HIVE</span></span>
+  </button>
+
+  <nav class="crumbs" id="crumbs" hidden>
+    <button class="crumb-back" id="crumb-back" type="button">
+      <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      All modules
+    </button>
+    <span class="crumb-sep">/</span>
+    <span class="crumb-now" id="crumb-now"></span>
+  </nav>
+
+  <span class="disclaimer">Synthetic data · demonstration · not a submittable FDA package</span>
+</header>
+
+<main id="main">
+
+  <section id="view-home">
+
+    <div class="hero">
+      <div class="hero-copy">
+        <h1>From scattered source records to a traceable Module 1 package.</h1>
+        <p>Sponsor, product, protocol and plan records are normalised into one canonical
+           record, then mapped into Module 1 artifacts. Every field keeps its source. Where
+           sources disagree, nothing is chosen for you.</p>
+        <p class="hero-fine">Ten <strong>fictional cases</strong> are supplied as <strong>input</strong>.
+           Every artifact below is <strong>produced from them by the pipeline</strong> —
+           <strong>none of it is a stored sample document</strong>.</p>
+        <div class="hero-actions">
+          <button class="btn primary" id="hero-cta">See what it generated</button>
+          <button class="btn ghost" data-ask="Show me a case where the sources disagree">See a conflict</button>
+        </div>
+      </div>
+
+      <svg class="hero-svg" viewBox="0 0 520 250" role="img" aria-label="Source records flow into one canonical IND record, which produces five Module 1 artifacts.">
+        <g class="flow">
+          <path d="M114 125 C152 125 150 125 184 125"/>
+          <path d="M252 125 C296 125 300 57 338 57"/>
+          <path d="M252 125 C296 125 300 91 338 91"/>
+          <path d="M252 125 C296 125 300 125 338 125"/>
+          <path d="M252 125 C296 125 300 159 338 159"/>
+          <path d="M252 125 C296 125 300 193 338 193"/>
+        </g>
+
+        <g id="hero-input" class="hotspot" role="button" tabindex="0" aria-label="Open the source input view">
+          <text class="cap" x="68" y="40" text-anchor="middle">SOURCE RECORDS</text>
+          <g class="src">
+            <rect x="24" y="50" width="90" height="20" rx="4"/>
+            <rect x="24" y="78" width="90" height="20" rx="4"/>
+            <rect x="24" y="106" width="90" height="20" rx="4"/>
+            <rect x="24" y="134" width="90" height="20" rx="4"/>
+            <rect x="24" y="162" width="90" height="20" rx="4"/>
+          </g>
+        </g>
+
+        <path class="hexnode" d="M196 95 L236 95 L248 125 L236 155 L196 155 L184 125 Z"/>
+        <text class="hexlabel" x="216" y="122" text-anchor="middle">CANONICAL</text>
+        <text class="hexlabel" x="216" y="136" text-anchor="middle">IND</text>
+
+        <g class="out">
+          <rect x="338" y="45" width="158" height="24" rx="5"/>
+          <rect x="338" y="79" width="158" height="24" rx="5"/>
+          <rect x="338" y="113" width="158" height="24" rx="5"/>
+          <rect x="338" y="147" width="158" height="24" rx="5"/>
+          <rect x="338" y="181" width="158" height="24" rx="5"/>
+        </g>
+        <text class="outlabel" x="351" y="61">Form FDA 1571</text>
+        <text class="outlabel" x="351" y="95">Cover letter</text>
+        <text class="outlabel" x="351" y="129">1.20 Investigational plan</text>
+        <text class="outlabel" x="351" y="163">Module 1 gap analysis</text>
+        <text class="outlabel" x="351" y="197">Validation</text>
+      </svg>
+    </div>
+
+    <div class="section-head">
+      <h2>Demonstration case</h2>
+      <p>Ten fictional cases. Four are deliberately imperfect.</p>
+    </div>
+    <div id="cases" class="caserail"></div>
+
+    <div class="section-head">
+      <h2>Input</h2>
+      <p>What the pipeline was given. Nothing below is generated.</p>
+    </div>
+    <div id="input-grid" class="modgrid"></div>
+
+    <div class="section-head">
+      <h2>Generated output</h2>
+      <p id="case-caption"></p>
+    </div>
+    <div id="modules" class="modgrid"></div>
+
+  </section>
+
+  <section id="view-detail" hidden>
+    <div class="detail-head">
+      <div class="detail-titles">
+        <h2 id="detail-title"></h2>
+        <p id="detail-sub"></p>
+      </div>
+      <div class="detail-jump" id="detail-jump"></div>
+    </div>
+    <div class="detail-body">
+      <div id="pane" class="pane"></div>
+      <aside id="rail" class="rail" hidden>
+        <h4>Source records</h4>
+        <div id="rail-items"></div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<button id="chat-fab" class="chat-fab" type="button" aria-label="Open the HIVE assistant">
+  <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+    <path d="M11 4.5 L21 4.5 L26 16 L21 27.5 L11 27.5 L6 16 Z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="12.6" cy="16" r="1.6" fill="#fff"/>
+    <circle cx="16" cy="16" r="1.6" fill="#fff"/>
+    <circle cx="19.4" cy="16" r="1.6" fill="#fff"/>
+  </svg>
+</button>
+
+<section id="chat" class="chat-panel" hidden aria-label="HIVE assistant">
+  <header class="chat-head">
+    <span class="chat-title">
+      <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+        <path d="M8 3.5 L16 3.5 L20 12 L16 20.5 L8 20.5 L4 12 Z" fill="none" stroke="url(#hiveGrad)" stroke-width="1.9" stroke-linejoin="round"/>
+      </svg>
+      HIVE assistant
+    </span>
+    <button id="chat-close" class="chat-x" type="button" aria-label="Close assistant">
+      <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <div id="log" class="log">
+    <div class="msg assistant">
+      <p>I am the guide to this showcase. I can walk you through what went in, what came out, and where the two disagree. Every case fact I state comes from a tool call, not from memory.</p>
+    </div>
+  </div>
+
+  <div id="starters" class="starters">
+    <button class="chip" data-ask="What am I looking at?">What am I looking at?</button>
+    <button class="chip" data-ask="Show me the input for IND003, then show me what it produced.">Show me the input</button>
+    <button class="chip" data-ask="Walk me through a clean IND package">Walk me through a clean package</button>
+    <button class="chip" data-ask="Show me a case where the sources disagree">Where do sources disagree?</button>
+    <button class="chip" data-ask="What is missing before IND008 could be filed?">What is still missing?</button>
+    <button class="chip" data-ask="Which sponsor name is the correct one for IND003?">Which value is correct?</button>
+    <button class="chip" data-ask="Can I file IND001 with FDA today?">Can I file this today?</button>
+  </div>
+
+  <form id="composer" class="composer">
+    <textarea id="input" rows="1" placeholder="Ask about a case, a 1571 box, or what is missing" autocomplete="off"></textarea>
+    <button id="send" type="submit" aria-label="Send">
+      <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M3 10l14-6-6 14-2-6-6-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+    </button>
+  </form>
+</section>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+{
+  "case_id": "IND001",
+  "document_name": "IND Cover Letter - POC Draft",
+  "generation_method": "template_fallback",
+  "model": null,
+  "text": "# IND Cover Letter - POC Draft\n\n**POC draft for demonstration only. Not FDA-submission-ready.**\n\n2026-08-18\n\nFood and Drug Administration\nCenter for Drug Evaluation and Research\n\nRe: Initial IND for AVC-101\n\nDear FDA Reviewer:\n\nAsterVale Therapeutics, Inc. is submitting this POC draft package for AVC-101. This generated document is based only on the selected synthetic IND case.\n\nThe referenced clinical protocol information is: Protocol AVC101-101; A Phase 1 Study of AVC-101 in Participants with Recurrent Low-Grade Serous Ovarian Cancer; Phase 1.\n\nThe POC Module 1 package includes:\n- IND Cover Letter\n- FDA Form 1571 POC Field View\n- Simplified Module 1 Table of Contents\n- Basic validation results\n\nSponsor contact:\nMaya Ellison\nVice President, Regulatory Affairs\n919-555-0142\nmaya.ellison@astervale.example\n\nSincerely,\nMaya Ellison",
+  "facts_used": [
+    {
+      "path": "submission.submission_date",
+      "value": "2026-08-18",
+      "source": "synthetic_case.IND001.submission.submission_date"
+    },
+    {
+      "path": "submission.submission_type",
+      "value": "Initial IND",
+      "source": "synthetic_case.IND001.submission.submission_type"
+    },
+    {
+      "path": "submission.serial_number",
+      "value": "0000",
+      "source": "synthetic_case.IND001.submission.serial_number"
+    },
+    {
+      "path": "sponsor.legal_name",
+      "value": "AsterVale Therapeutics, Inc.",
+      "source": "synthetic_case.IND001.sponsor.legal_name"
+    },
+    {
+      "path": "sponsor.address_line_1",
+      "value": "4100 Meridian Park Drive",
+      "source": "synthetic_case.IND001.sponsor.address_line_1"
+    },
+    {
+      "path": "sponsor.address_line_2",
+      "value": "Suite 210",
+      "source": "synthetic_case.IND001.sponsor.address_line_2"
+    },
+    {
+      "path": "sponsor.city",
+      "value": "Raleigh",
+      "source": "synthetic_case.IND001.sponsor.city"
+    },
+    {
+      "path": "sponsor.state",
+      "value": "NC",
+      "source": "synthetic_case.IND001.sponsor.state"
+    },
+    {
+      "path": "sponsor.postal_code",
+      "value": "27612",
+      "source": "synthetic_case.IND001.sponsor.postal_code"
+    },
+    {
+      "path": "sponsor.country",
+      "value": "USA",
+      "source": "synthetic_case.IND001.sponsor.country"
+    },
+    {
+      "path": "sponsor.contact_name",
+      "value": "Maya Ellison",
+      "source": "synthetic_case.IND001.sponsor.contact_name"
+    },
+    {
+      "path": "sponsor.contact_title",
+      "value": "Vice President, Regulatory Affairs",
+      "source": "synthetic_case.IND001.sponsor.contact_title"
+    },
+    {
+      "path": "sponsor.phone",
+      "value": "919-555-0142",
+      "source": "synthetic_case.IND001.sponsor.phone"
+    },
+    {
+      "path": "sponsor.email",
+      "value": "maya.ellison@astervale.example",
+      "source": "synthetic_case.IND001.sponsor.email"
+    },
+    {
+      "path": "product.code_name",
+      "value": "AVC-101",
+      "source": "synthetic_case.IND001.product.code_name"
+    },
+    {
+      "path": "product.dosage_form",
+      "value": "oral capsule",
+      "source": "synthetic_case.IND001.product.dosage_form"
+    },
+    {
+      "path": "product.route",
+      "value": "oral",
+      "source": "synthetic_case.IND001.product.route"
+    },
+    {
+      "path": "product.indication",
+      "value": "recurrent low-grade serous ovarian cancer",
+      "source": "synthetic_case.IND001.product.indication"
+    },
+    {
+      "path": "protocol.protocol_number",
+      "value": "AVC101-101",
+      "source": "synthetic_case.IND001.protocol.protocol_number"
+    },
+    {
+      "path": "protocol.title",
+      "value": "A Phase 1 Study of AVC-101 in Participants with Recurrent Low-Grade Serous Ovarian Cancer",
+      "source": "synthetic_case.IND001.protocol.title"
+    },
+    {
+      "path": "protocol.phase",
+      "value": "Phase 1",
+      "source": "synthetic_case.IND001.protocol.phase"
+    },
+    {
+      "path": "protocol.version",
+      "value": "1.0",
+      "source": "synthetic_case.IND001.protocol.version"
+    },
+    {
+      "path": "protocol.protocol_date",
+      "value": "2026-07-22",
+      "source": "synthetic_case.IND001.protocol.protocol_date"
+    }
+  ],
+  "warnings": [
+    "LLM generation unavailable; used deterministic fallback. Reason: RuntimeError: OPENAI_API_KEY is not set"
+  ]
+}

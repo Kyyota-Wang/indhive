@@ -1,0 +1,20 @@
+{
+  "case_id": "IND002",
+  "expected_canonical": {
+    "sponsor.legal_name": "NeuroLumen Biopharma, Inc.",
+    "product.code_name": "NLX-204",
+    "protocol.protocol_number": "NLX204-101",
+    "protocol.phase": "Phase 1b",
+    "submission.submission_type": "Initial IND",
+    "submission.submission_date": "2026-08-18"
+  },
+  "expected_validation": {
+    "required_missing": [],
+    "optional_missing": [
+      "sponsor.contact_title",
+      "protocol.protocol_date",
+      "investigator.email"
+    ],
+    "conflict_fields": []
+  }
+}

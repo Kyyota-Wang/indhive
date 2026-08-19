@@ -1,0 +1,70 @@
+{
+  "case_id": "IND001",
+  "document_name": "1.20 General Investigational Plan - POC Draft",
+  "supplied": true,
+  "summary": {
+    "elements_total": 6,
+    "elements_present": 6,
+    "elements_missing": 0,
+    "studies": 1
+  },
+  "elements": [
+    {
+      "element_id": "rationale",
+      "heading": "Rationale for the drug and the research",
+      "canonical_path": "plan.rationale",
+      "status": "PRESENT",
+      "value": "AVC-101 is an oral small-molecule inhibitor intended to address the limited treatment options for participants with recurrent low-grade serous ovarian cancer, a tumour type that responds poorly to conventional cytotoxic chemotherapy. Nonclinical studies support an acceptable margin between the pharmacologically active exposure and exposures associated with toxicity."
+    },
+    {
+      "element_id": "indication",
+      "heading": "Indication to be studied",
+      "canonical_path": "product.indication",
+      "status": "PRESENT",
+      "value": "recurrent low-grade serous ovarian cancer"
+    },
+    {
+      "element_id": "general_approach",
+      "heading": "General approach to evaluating the drug",
+      "canonical_path": "plan.general_approach",
+      "status": "PRESENT",
+      "value": "Development will proceed sequentially. A first-in-human dose-escalation study will characterise safety, tolerability and pharmacokinetics and identify a recommended dose. Expansion at that dose will provide a preliminary assessment of antitumour activity before any decision to proceed to a randomised study."
+    },
+    {
+      "element_id": "first_year_scope",
+      "heading": "Kinds of clinical trials planned for the first year",
+      "canonical_path": "plan.first_year_scope",
+      "status": "PRESENT",
+      "value": "One Phase 1 dose-escalation study with a dose-expansion component is planned in the first year following submission. No additional clinical studies are planned during that period."
+    },
+    {
+      "element_id": "estimated_enrollment",
+      "heading": "Estimated number of participants",
+      "canonical_path": "plan.estimated_enrollment",
+      "status": "PRESENT",
+      "value": "Approximately 36 participants (up to 24 in dose escalation and 12 in dose expansion)."
+    },
+    {
+      "element_id": "anticipated_risks",
+      "heading": "Anticipated risks of particular severity or seriousness",
+      "canonical_path": "plan.anticipated_risks",
+      "status": "PRESENT",
+      "value": "Based on repeat-dose toxicology in rat and dog, the anticipated risks of particular severity are reversible hepatocellular injury observed at exposures above the proposed starting dose, and dose-dependent neutropenia. Liver function tests and absolute neutrophil counts are protocol-specified stopping criteria."
+    }
+  ],
+  "planned_studies": [
+    {
+      "study_id": "AVC101-101",
+      "title": "A Phase 1 Study of AVC-101 in Participants with Recurrent Low-Grade Serous Ovarian Cancer",
+      "objectives": "To determine the safety, tolerability and maximum tolerated dose of oral AVC-101; to characterise single- and multiple-dose pharmacokinetics; to make a preliminary assessment of antitumour activity.",
+      "design": "Open-label, single-arm, 3+3 dose escalation followed by dose expansion at the recommended dose.",
+      "sample_size": "Up to 36 participants; no formal sample size calculation was performed for this preliminary study.",
+      "population": "Adults with histologically confirmed recurrent low-grade serous ovarian cancer who have received at least one prior line of systemic therapy.",
+      "parameters": "Safety and tolerability by adverse events, laboratory tests, ECG and physical examination. Pharmacokinetic parameters include Cmax, Tmax and AUC. Antitumour activity assessed by RECIST v1.1.",
+      "status": "Protocol submitted with this Initial IND. Enrolment has not started.",
+      "source_record": "investigational_plan"
+    }
+  ],
+  "note": "Required elements follow 21 CFR 312.23(a)(3)(iv). This is a POC draft assembled from synthetic case data and is not a submission-ready document.",
+  "markdown": "# 1.20 General Investigational Plan - POC Draft\n\nCase: IND001\n\n## Rationale for the drug and the research\nAVC-101 is an oral small-molecule inhibitor intended to address the limited treatment options for participants with recurrent low-grade serous ovarian cancer, a tumour type that responds poorly to conventional cytotoxic chemotherapy. Nonclinical studies support an acceptable margin between the pharmacologically active exposure and exposures associated with toxicity.\n\n## Indication to be studied\nrecurrent low-grade serous ovarian cancer\n\n## General approach to evaluating the drug\nDevelopment will proceed sequentially. A first-in-human dose-escalation study will characterise safety, tolerability and pharmacokinetics and identify a recommended dose. Expansion at that dose will provide a preliminary assessment of antitumour activity before any decision to proceed to a randomised study.\n\n## Kinds of clinical trials planned for the first year\nOne Phase 1 dose-escalation study with a dose-expansion component is planned in the first year following submission. No additional clinical studies are planned during that period.\n\n## Estimated number of participants\nApproximately 36 participants (up to 24 in dose escalation and 12 in dose expansion).\n\n## Anticipated risks of particular severity or seriousness\nBased on repeat-dose toxicology in rat and dog, the anticipated risks of particular severity are reversible hepatocellular injury observed at exposures above the proposed starting dose, and dose-dependent neutropenia. Liver function tests and absolute neutrophil counts are protocol-specified stopping criteria.\n\n## Studies planned for the first year\n\n### 1. A Phase 1 Study of AVC-101 in Participants with Recurrent Low-Grade Serous Ovarian Cancer\n- **Objectives:** To determine the safety, tolerability and maximum tolerated dose of oral AVC-101; to characterise single- and multiple-dose pharmacokinetics; to make a preliminary assessment of antitumour activity.\n- **Study design:** Open-label, single-arm, 3+3 dose escalation followed by dose expansion at the recommended dose.\n- **Planned sample size:** Up to 36 participants; no formal sample size calculation was performed for this preliminary study.\n- **Study population:** Adults with histologically confirmed recurrent low-grade serous ovarian cancer who have received at least one prior line of systemic therapy.\n- **Study parameters:** Safety and tolerability by adverse events, laboratory tests, ECG and physical examination. Pharmacokinetic parameters include Cmax, Tmax and AUC. Antitumour activity assessed by RECIST v1.1.\n- **Status:** Protocol submitted with this Initial IND. Enrolment has not started.\n\n_Required elements follow 21 CFR 312.23(a)(3)(iv). POC draft from synthetic data; not submission-ready._"
+}
