@@ -89,12 +89,13 @@ cd ../../V1 && python build/bundle_cases.py
 
 ```bash
 cd V1
-npx wrangler secret put ANTHROPIC_API_KEY
-npm run deploy
+npx wrangler deploy
 ```
 
-Then attach the domain — either add a `routes` entry to `V1/wrangler.jsonc` or set the
-custom domain in the Cloudflare dashboard.
+Both hostnames are already declared as custom domains in `wrangler.jsonc`, so wrangler
+maintains their DNS records and certificates. The Anthropic key is already set as a Worker
+secret; it only needs re-running (`npx wrangler secret put ANTHROPIC_API_KEY`) if the key
+is rotated.
 
 `/api/chat` is rate limited at the edge by the `CHAT_LIMIT` binding declared in
 `wrangler.jsonc` (8 requests / 60s per IP), backed by an in-isolate burst counter. Edge
