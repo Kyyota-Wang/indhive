@@ -132,6 +132,16 @@ export const TOOLS = [
   },
 ];
 
+// Which output consumed a supplied field. Mirrors destinationOf() in public/app.js
+// so the assistant and the input view always say the same thing.
+function destinationOf(c: Any, path: string): string {
+  const f = c.form_1571.fields.find((x: Any) => x.canonical_path === path);
+  if (f) return f.box ? `Form 1571, Box ${f.box}` : "Form 1571, supporting data (not a numbered box)";
+  if (path.startsWith("plan.")) return "1.20 General Investigational Plan";
+  if (path.startsWith("investigator.")) return "Form FDA 1572 — no generator, so nothing consumes it";
+  return "not used by any current output";
+}
+
 export function runTool(name: string, input: Any): { result: Any; canvas?: Any } {
   switch (name) {
     case "list_cases": {
@@ -152,6 +162,9 @@ export function runTool(name: string, input: Any): { result: Any; canvas?: Any }
             supplied: Object.entries(r.fields).map(([path, value]) => ({
               path,
               value,
+              // Stated, never inferred: quoting a box number from memory is how a
+              // wrong one ends up in an answer.
+              destination: destinationOf(c, path),
               contested: contested.has(path),
             })),
             planned_studies: (r.planned_studies || []).length,

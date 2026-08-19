@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "indhive-poc",
+  "name": "indhive",
   "main": "src/index.ts",
   "compatibility_date": "2026-08-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -11,4 +11,16 @@
   "observability": {
     "enabled": true
   }
+
+  // Domain. Uncomment once indhive.com is an active zone on this Cloudflare
+  // account — deploy fails if the zone is not there yet. The apex is a custom
+  // domain; www is a plain route so both resolve to the same Worker.
+  //
+  // "routes": [
+  //   { "pattern": "indhive.com", "custom_domain": true },
+  //   { "pattern": "www.indhive.com/*", "zone_name": "indhive.com" }
+  // ]
+
+  // Secret, set once per environment and never committed:
+  //   npx wrangler secret put ANTHROPIC_API_KEY
 }
