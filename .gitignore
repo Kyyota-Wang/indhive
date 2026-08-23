@@ -15,6 +15,12 @@ venv/
 .mypy_cache/
 .ruff_cache/
 
+# Partner-supplied source material (PMX-103 input package).
+# These documents carry the partner's own confidentiality marking
+# (21 CFR 312.130, sponsor-attributable trade secret). Committing them is a
+# decision for the partner to make, not a side effect of `git add -A`.
+Data/partner-inputs/
+
 # Reference document: a 153 MB FOIA-released FDA review file (IND 36,357).
 # Too large for GitHub and not needed to build or run anything here.
 Data/*.pdf
