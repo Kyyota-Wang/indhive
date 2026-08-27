@@ -1,0 +1,15 @@
+[project]
+name = "indkit"
+version = "0.2.0"
+description = "Turns IND source records into FDA Module 1 artifacts and authored IND documents."
+requires-python = ">=3.11"
+dependencies = ["python-docx>=1.2.0", "lxml"]
+
+[project.optional-dependencies]
+build = ["openpyxl"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

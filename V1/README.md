@@ -19,14 +19,14 @@ deterministic — same input, same output, always. Running them at request time
 and shipping their output as a build artifact produce byte-identical results, so
 the Worker ships the artifact and stays a single deploy unit with no second host.
 
-The Python code in `../Data/POC data/` remains the only implementation of that
+The Python code in `../indkit/` remains the only implementation of that
 logic. Nothing is reimplemented in TypeScript.
 
 Regenerate the bundle whenever the pipeline or the source cases change:
 
 ```bash
-cd "../Data/POC data" && python run_poc.py --all
-cd ../../V1 && python build/bundle_cases.py
+cd ../indkit && python scripts/run_pipeline.py --all
+cd ../V1 && python build/bundle_cases.py
 ```
 
 ## Setup

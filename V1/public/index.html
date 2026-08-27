@@ -58,12 +58,13 @@
         <p>Sponsor, product, protocol and plan records are normalised into one canonical
            record, then mapped into Module 1 artifacts. Every field keeps its source. Where
            sources disagree, nothing is chosen for you.</p>
-        <p class="hero-fine">Ten <strong>fictional cases</strong> are supplied as <strong>input</strong>.
-           Every artifact below is <strong>produced from them by the pipeline</strong> —
+        <p class="hero-fine">Ten <strong>fictional cases</strong> and one
+           <strong>partner-supplied</strong> one are the <strong>input</strong>. Every artifact
+           below is <strong>produced from them by the pipeline</strong> —
            <strong>none of it is a stored sample document</strong>.</p>
         <div class="hero-actions">
           <button class="btn primary" id="hero-cta">See what it generated</button>
-          <button class="btn ghost" data-ask="Show me a case where the sources disagree">See a conflict</button>
+          <button class="btn ghost" data-ask="How does the PMX-103 gap analysis compare with the partner's own gaps log?">See the PMX-103 crosswalk</button>
         </div>
       </div>
 
@@ -107,8 +108,22 @@
       </svg>
     </div>
 
+    <div class="partner-block" id="partner-block" hidden>
+      <div class="partner-copy">
+        <span class="partner-tag">Partner input · reviewable</span>
+        <h2>PMX-103</h2>
+        <p>A clinical partner built a real-shaped input package for this programme and sent his
+           own answers with it — a hand-filled Form 1571, a ten-entry gaps log, a traceability
+           matrix. The pipeline ran on his input and never saw his answers. Then the two were
+           put side by side.</p>
+        <p class="partner-fine">Everything else on this page is fiction checked against nothing.
+           This is the one case with something to check against.</p>
+        <button class="btn primary" id="partner-open" type="button">Open PMX-103</button>
+      </div>
+    </div>
+
     <div class="section-head">
-      <h2>Demonstration case</h2>
+      <h2>Demonstration cases</h2>
       <p>Ten fictional cases. Four are deliberately imperfect.</p>
     </div>
     <div id="cases" class="caserail"></div>
@@ -124,6 +139,14 @@
       <p id="case-caption"></p>
     </div>
     <div id="modules" class="modgrid"></div>
+
+    <div class="section-head" id="review-head" hidden>
+      <h2>Checked against his answers</h2>
+      <p>Only the partner-supplied case has these. Nothing here fed back into generation.</p>
+    </div>
+    <div id="review-grid" class="modgrid" hidden></div>
+
+    <div id="boundary-block" hidden></div>
 
   </section>
 

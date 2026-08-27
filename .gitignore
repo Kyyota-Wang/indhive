@@ -19,11 +19,18 @@ venv/
 # These documents carry the partner's own confidentiality marking
 # (21 CFR 312.130, sponsor-attributable trade secret). Committing them is a
 # decision for the partner to make, not a side effect of `git add -A`.
-Data/partner-inputs/
+inputs/
+indkit/out/
+reports/
+
+# The tamper demo's working copy. It is a verbatim copy of the partner's package,
+# made so a number can be changed without touching their files, and it carries the
+# same confidentiality marking they do. Never commit it.
+Data/POC data/outputs/tamper/
 
 # Reference document: a 153 MB FOIA-released FDA review file (IND 36,357).
 # Too large for GitHub and not needed to build or run anything here.
-Data/*.pdf
+inputs/reference/*.pdf
 
 # Git metadata from the tool that first scaffolded the pipeline folder
 .git.codex-bak/

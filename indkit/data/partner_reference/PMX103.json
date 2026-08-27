@@ -1,0 +1,458 @@
+{
+  "case_id": "PMX103",
+  "package_date": "22 August 2026",
+  "package_files": [
+    "06_Form_FDA_1571_AutoFilled.docx",
+    "07_CMC_Dossier_PMX103_v3.docx",
+    "08_Investigator_Brochure_PMX103_v3.docx",
+    "09_Nonclinical_Development_Plan_PMX103_v3.docx",
+    "10_Phase1_Protocol_PMX103_P1_001_v3.docx",
+    "11_Toxicology_Dossier_PMX103_v3.docx",
+    "12_IND_Drafting_Input_Brief_PMX103.docx",
+    "13_IND_Drafting_Instructions_PMX103.docx",
+    "14_IND_Section_Traceability_Matrix.xlsx",
+    "15_AI_Agent_Input_Schema.json"
+  ],
+  "source_files": {
+    "gaps_log": "14_IND_Section_Traceability_Matrix.xlsx > GAPS Log",
+    "section_map": "14_IND_Section_Traceability_Matrix.xlsx > Section Map",
+    "invariants": "14_IND_Section_Traceability_Matrix.xlsx > Invariants",
+    "form_1571_draft": "06_Form_FDA_1571_AutoFilled.docx",
+    "module_map": "12_IND_Drafting_Input_Brief_PMX103.docx > Section C",
+    "instructions": "13_IND_Drafting_Instructions_PMX103.docx"
+  },
+  "gaps_log": [
+    {
+      "id": "GAP-01",
+      "item": "Actual IND number (placeholder 100,001 reserved)",
+      "owner": "Regulatory (Whitfield)",
+      "source_needed": "FDA IND receipt",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-02",
+      "item": "Form 1571 signatory confirmation",
+      "owner": "Regulatory (Whitfield)",
+      "source_needed": "Sponsor authorization",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-03",
+      "item": "Proprietary / INN name (not assigned)",
+      "owner": "Regulatory",
+      "source_needed": "WHO INN / trademark",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-04",
+      "item": "Site and investigator list (Form 1572)",
+      "owner": "Clinical (Tanaka)",
+      "source_needed": "Site selection",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-05",
+      "item": "ClinicalTrials.gov NCT ID (Form 3674)",
+      "owner": "Clinical (Tanaka)",
+      "source_needed": "ClinicalTrials.gov registration",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-06",
+      "item": "Financial disclosure Forms 3454/3455",
+      "owner": "Regulatory",
+      "source_needed": "Per-investigator",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-07",
+      "item": "Clinical data (none - Phase 1 not started)",
+      "owner": "Clinical",
+      "source_needed": "n/a",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-08",
+      "item": "Actual batch COAs (illustrative values only)",
+      "owner": "CMC (Kim)",
+      "source_needed": "QC certificates",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-09",
+      "item": "Final protocol version date (v3.0 dated 22 Aug 2026)",
+      "owner": "Clinical",
+      "source_needed": "Protocol finalization",
+      "status": "Open"
+    },
+    {
+      "id": "GAP-10",
+      "item": "IRB approvals at each site",
+      "owner": "Clinical",
+      "source_needed": "Site IRBs",
+      "status": "Open"
+    }
+  ],
+  "section_map": [
+    {
+      "section": "(a)(1) Cover sheet - Form 1571",
+      "ectd_location": "M1.1",
+      "required_content": "Sponsor, drug, indication, phase, enclosed items",
+      "source_document": "Form 1571 draft",
+      "source_file": "06_Form_FDA_1571_AutoFilled_v2.docx",
+      "status": "Ready (confirm GAP-01/02)"
+    },
+    {
+      "section": "(a)(2) Table of contents",
+      "ectd_location": "M1.2",
+      "required_content": "Index of all sections/documents",
+      "source_document": "Traceability matrix",
+      "source_file": "14_IND_Section_Traceability_Matrix.xlsx",
+      "status": "Ready"
+    },
+    {
+      "section": "(a)(3) Introductory statement & plan",
+      "ectd_location": "M1.3",
+      "required_content": "Drug name, class, structure, formulation, indication, general plan",
+      "source_document": "Input brief Section B.3",
+      "source_file": "12_IND_Drafting_Input_Brief_PMX103.docx",
+      "status": "Ready"
+    },
+    {
+      "section": "(a)(5) Investigator's Brochure",
+      "ectd_location": "M1.5",
+      "required_content": "Full IB",
+      "source_document": "IB dossier",
+      "source_file": "08_Investigator_Brochure_PMX103_v3.docx",
+      "status": "Ready"
+    },
+    {
+      "section": "(a)(6) Protocols",
+      "ectd_location": "M1.6",
+      "required_content": "Full protocol",
+      "source_document": "Protocol dossier",
+      "source_file": "10_Phase1_Protocol_PMX103_P1_001_v3.docx",
+      "status": "Ready"
+    },
+    {
+      "section": "(a)(7) CMC information",
+      "ectd_location": "M1.7 / M3",
+      "required_content": "Drug substance & product, manufacture, control, stability",
+      "source_document": "CMC dossier",
+      "source_file": "07_CMC_Dossier_PMX103_v3.docx",
+      "status": "Ready"
+    },
+    {
+      "section": "(a)(8) Pharmacology & toxicology",
+      "ectd_location": "M1.8 / M2.6 / M4",
+      "required_content": "Nonclinical written + tabulated summaries; study reports",
+      "source_document": "NCD + TOX dossiers",
+      "source_file": "09_Nonclinical_Development_Plan_PMX103_v3.docx; 11_Toxicology_Dossier_PMX103_v3.docx",
+      "status": "Ready"
+    },
+    {
+      "section": "(a)(9) Previous human experience",
+      "ectd_location": "M1.9",
+      "required_content": "None for PMX-103; class precedent",
+      "source_document": "IB 6; REFS",
+      "source_file": "08_Investigator_Brochure_PMX103_v3.docx",
+      "status": "Ready"
+    },
+    {
+      "section": "(a)(10) Additional information",
+      "ectd_location": "M1.10",
+      "required_content": "PREA waiver, dependence, financial disclosure",
+      "source_document": "Input brief B.10",
+      "source_file": "12_IND_Drafting_Input_Brief_PMX103.docx",
+      "status": "Partial (GAP-06)"
+    },
+    {
+      "section": "(a)(11) Relevant information",
+      "ectd_location": "M1.11",
+      "required_content": "Cross-references",
+      "source_document": "Traceability matrix",
+      "source_file": "14_IND_Section_Traceability_Matrix.xlsx",
+      "status": "Ready"
+    },
+    {
+      "section": "Module 2 summaries",
+      "ectd_location": "M2",
+      "required_content": "Quality overall, nonclinical overview/summaries, clinical overview",
+      "source_document": "NCD + CMC",
+      "source_file": "09_NCD; 07_CMC",
+      "status": "Ready (clinical overview = GAP-07)"
+    },
+    {
+      "section": "Module 5 clinical reports",
+      "ectd_location": "M5",
+      "required_content": "None yet",
+      "source_document": "n/a",
+      "source_file": "n/a",
+      "status": "GAP-07"
+    }
+  ],
+  "invariants": [
+    {
+      "parameter": "drug_code",
+      "value": "PMX-103",
+      "unit": "-",
+      "source": "Master data sheet"
+    },
+    {
+      "parameter": "starting_dose_ug_flat",
+      "value": "0.5",
+      "unit": "ug",
+      "source": "Master data sheet"
+    },
+    {
+      "parameter": "starting_dose_Cmax",
+      "value": "0.041",
+      "unit": "ng/mL",
+      "source": "PK projection"
+    },
+    {
+      "parameter": "in_vitro_EC10",
+      "value": "0.12",
+      "unit": "ng/mL",
+      "source": "IVT-002"
+    },
+    {
+      "parameter": "in_vitro_EC50",
+      "value": "0.62",
+      "unit": "ng/mL",
+      "source": "IVT-002"
+    },
+    {
+      "parameter": "mabel_anchor_mouse",
+      "value": "1",
+      "unit": "ug/kg",
+      "source": "TOX-002"
+    },
+    {
+      "parameter": "noael_cyno",
+      "value": "5",
+      "unit": "ug/kg",
+      "source": "TOX-005"
+    },
+    {
+      "parameter": "noael_glp_mouse",
+      "value": "10",
+      "unit": "ug/kg",
+      "source": "TOX-006"
+    },
+    {
+      "parameter": "mtd_mouse",
+      "value": "30",
+      "unit": "ug/kg",
+      "source": "TOX-003"
+    },
+    {
+      "parameter": "hnstd_cyno",
+      "value": "50",
+      "unit": "ug/kg",
+      "source": "TOX-005"
+    },
+    {
+      "parameter": "cyno_Cmax_40ug",
+      "value": "34.2",
+      "unit": "ng/mL",
+      "source": "PK cyno"
+    },
+    {
+      "parameter": "cyno_AUC_168h",
+      "value": "1281",
+      "unit": "ng.h/mL",
+      "source": "PK cyno"
+    },
+    {
+      "parameter": "human_CL",
+      "value": "0.21",
+      "unit": "mL/h/kg",
+      "source": "Allometric scaling"
+    },
+    {
+      "parameter": "human_Vss",
+      "value": "0.18",
+      "unit": "L/kg",
+      "source": "Allometric scaling"
+    },
+    {
+      "parameter": "step_up_sequence_days",
+      "value": "C1D1 0.5 ug -> C1D8 5 ug",
+      "unit": "-",
+      "source": "Protocol 4.3"
+    },
+    {
+      "parameter": "premedication",
+      "value": "acetaminophen 650 mg PO + diphenhydramine 25 mg PO + dexamethasone 8 mg IV",
+      "unit": "-",
+      "source": "Protocol 6.2"
+    },
+    {
+      "parameter": "dlt_window_days",
+      "value": "28",
+      "unit": "days",
+      "source": "Protocol 8.3"
+    },
+    {
+      "parameter": "mTPI-2 pT / EI",
+      "value": "0.30 / [0.25-0.35]",
+      "unit": "-",
+      "source": "Protocol 9.3"
+    },
+    {
+      "parameter": "lot_drug_substance",
+      "value": "PMX-103-DS-25-017 (clinical); PMX-103-DS-25-014 (tox)",
+      "unit": "-",
+      "source": "CMC 3.2.S.4.4"
+    },
+    {
+      "parameter": "lot_drug_product",
+      "value": "PMX-103-DP-26-007 (1 mg/1.1 mL)",
+      "unit": "-",
+      "source": "CMC 3.2.P.5.4"
+    },
+    {
+      "parameter": "CRS_grading",
+      "value": "ASTCT 2019",
+      "unit": "-",
+      "source": "Protocol 8.5"
+    },
+    {
+      "parameter": "ICANS_grading",
+      "value": "ASTCT ICE 2L v2 2024",
+      "unit": "-",
+      "source": "Protocol 8.5"
+    },
+    {
+      "parameter": "expansion_cohorts",
+      "value": "cutaneous melanoma; uveal melanoma; synovial sarcoma",
+      "unit": "-",
+      "source": "Protocol 4.1"
+    }
+  ],
+  "module_map": [
+    {
+      "module": "Module 1",
+      "content": "Administrative: cover letter, Forms 1571/1572/3674/3454-5, IB, protocol, CMC summary, nonclinical summaries, previous human experience, additional info",
+      "source_documents": "12 (this brief); 06_Form_1571; 08_IB; 10_Protocol; 07_CMC; 09_NCD; 11_TOX"
+    },
+    {
+      "module": "Module 2",
+      "content": "Quality overall summary (2.3), Nonclinical overview (2.4) + written/tabulated summaries (2.6), Clinical overview (2.5)",
+      "source_documents": "09_NCD (M2.4, M2.6.2-2.6.6); CMC summary in 07_CMC; clinical overview to be drafted"
+    },
+    {
+      "module": "Module 3",
+      "content": "Quality: 3.2.S drug substance, 3.2.P drug product, 3.2.A appendices, 3.2.R regional",
+      "source_documents": "07_CMC_Dossier_PMX103_v3.docx"
+    },
+    {
+      "module": "Module 4",
+      "content": "Nonclinical study reports: pharmacology, PK, toxicology",
+      "source_documents": "11_Toxicology_Dossier_PMX103_v3.docx; 09_NCD_PMX103_v3.docx"
+    },
+    {
+      "module": "Module 5",
+      "content": "Clinical study reports (none yet - Phase 1 not started)",
+      "source_documents": "GAP-07 (no clinical data)"
+    }
+  ],
+  "form_1571_draft": [
+    {
+      "draft_number": null,
+      "label": "IND Number (to be assigned)",
+      "value": "100,001 (Sponsor reservation)"
+    },
+    {
+      "draft_number": null,
+      "label": "Serial Number",
+      "value": "0000 (Original Submission)"
+    },
+    {
+      "draft_number": "1",
+      "label": "Name of Sponsor",
+      "value": "Indela Therapeutics, Inc."
+    },
+    {
+      "draft_number": "2",
+      "label": "Address of Sponsor",
+      "value": "1515 Hollins Street, Suite 400, Baltimore, MD 21202"
+    },
+    {
+      "draft_number": "3",
+      "label": "Representative",
+      "value": "Dr. [Name], Chief Medical Officer"
+    },
+    {
+      "draft_number": "4",
+      "label": "Telephone",
+      "value": "+1 410 555 0143"
+    },
+    {
+      "draft_number": "5",
+      "label": "Drug Name (generic/trade)",
+      "value": "PMX-103 (Generic: anti-PRAME/HLA-A*02:01-peptide × anti-CD3ε BiTE)"
+    },
+    {
+      "draft_number": "6",
+      "label": "Indication(s)",
+      "value": "Advanced PRAME-positive, HLA-A*02:01-positive solid tumors (PRAME H-score ≥ 80)"
+    },
+    {
+      "draft_number": "7",
+      "label": "Phase of Study",
+      "value": "Phase 1 — first-in-human"
+    },
+    {
+      "draft_number": "8",
+      "label": "IND is NOT for a",
+      "value": "(check): None"
+    },
+    {
+      "draft_number": "9",
+      "label": "Type of submission (check on top of page 2)",
+      "value": "Original IND submission (box b)"
+    },
+    {
+      "draft_number": "10",
+      "label": "Contents of Application — Section a–k (check all that apply)",
+      "value": "All applicable"
+    },
+    {
+      "draft_number": "11",
+      "label": "Investigator's Brochure status",
+      "value": "Yes — IB Version 1.0 attached"
+    },
+    {
+      "draft_number": "12",
+      "label": "Pre-existing IND references (cross-reference letter)",
+      "value": "None"
+    },
+    {
+      "draft_number": "13",
+      "label": "Pediatric studies (PREA) status",
+      "value": "Waiver / Deferral request anticipated under FDCA Section 505B / PREA; justification in §1.10 Protocol Section 9.4"
+    },
+    {
+      "draft_number": "14",
+      "label": "Human subject protection (IRB) in compliance with 21 CFR 56",
+      "value": "Yes"
+    },
+    {
+      "draft_number": "15",
+      "label": "Sponsor commitments (21 CFR 312.53(c)(1))",
+      "value": "Commitments are embraced (DMP, record retention, IRB/IEC, AE reporting, IND annual reports)"
+    },
+    {
+      "draft_number": "16",
+      "label": "Certification of compliance w/ Form FDA 3674",
+      "value": "Yes — attached"
+    },
+    {
+      "draft_number": "17",
+      "label": "Sponsor or sponsor-investigator signature & date",
+      "value": "21 August 2026"
+    }
+  ]
+}

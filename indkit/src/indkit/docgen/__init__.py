@@ -1,0 +1,1 @@
+"""Authored IND document construction."""

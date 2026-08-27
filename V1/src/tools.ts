@@ -12,6 +12,17 @@ function caseOr404(caseId: string): Any {
   return c;
 }
 
+// The four partner tools exist only for a case that shipped with an answer key.
+// Saying so beats returning an empty object the model then narrates around.
+function partnerOnly(c: Any): Any {
+  return {
+    case_id: c.case_id,
+    error:
+      `${c.case_id} is a fictional demonstration case. It has no partner-supplied material, so ` +
+      "there is nothing to compare it against. Only PMX103 does.",
+  };
+}
+
 function scalars(canonical: Any): Any {
   const out: Any = {};
   for (const section of SECTIONS) {
@@ -117,6 +128,62 @@ export const TOOLS = [
     input_schema: {
       type: "object",
       properties: { case_id: { type: "string" } },
+      required: ["case_id"],
+    },
+  },
+  {
+    name: "get_gap_crosswalk",
+    description:
+      "Only for a partner-supplied case. Put the pipeline's own gap list side by side with the gap list the partner wrote by hand, matched on topic. Each row is AGREED (both reached it), ONLY_OURS (the pipeline found it and their log does not list it) or ONLY_THEIRS (they list it and the pipeline's canonical record has no field for it). Use this for any question about whether the system reproduces their gap analysis, who owns a gap, or what has to arrive before one closes.",
+    input_schema: {
+      type: "object",
+      properties: { case_id: { type: "string" } },
+      required: ["case_id"],
+    },
+  },
+  {
+    name: "get_form_1571_diff",
+    description:
+      "Only for a partner-supplied case. Compare the generated Form 1571 field view against the 1571 draft the partner filled in by hand, organised by the box numbers printed on the real form. Returns a verdict per box plus findings, including every place their draft's own 1 to 17 numbering diverges from the form. Use this whenever the user asks how the generated form compares to theirs, or about 1571 box numbering.",
+    input_schema: {
+      type: "object",
+      properties: { case_id: { type: "string" } },
+      required: ["case_id"],
+    },
+  },
+  {
+    name: "get_partner_review",
+    description:
+      "Only for a partner-supplied case. Deterministic cross-document checks run over the partner's own package: whether its eCTD Module 1 section numbers are really 21 CFR 312.23(a) item numbers, whether two of their documents file the same dossier to different modules, and whether every file they cite exists in the package. Use this for questions about inconsistencies inside their material.",
+    input_schema: {
+      type: "object",
+      properties: { case_id: { type: "string" } },
+      required: ["case_id"],
+    },
+  },
+  {
+    name: "get_scope_boundary",
+    description:
+      "Only for a partner-supplied case. What Module 1 consumes from the partner's package and what it deliberately leaves alone, with the leftover counted by table. Use this whenever the user asks why so little of their package is used, what happened to the toxicology or CMC data, or whether this covers Modules 2 to 5.",
+    input_schema: {
+      type: "object",
+      properties: { case_id: { type: "string" } },
+      required: ["case_id"],
+    },
+  },
+  {
+    name: "get_invariant_scan",
+    description:
+      "Only for a partner-supplied case. The partner's traceability matrix declares 23 parameters that must read the same in every document. This is the result of going and checking, across the whole corpus of dossiers. Each parameter comes back CONSISTENT, INCONSISTENT, INCOMPLETE (a sentence sets out to state it and carries no readable value), UNSUPPORTED (no sentence found asserting it) or NOT SCANNED, with the document, sentence and character offset behind every assertion. Use this for questions about whether their numbers agree across documents, or how the scan works.",
+    input_schema: {
+      type: "object",
+      properties: {
+        case_id: { type: "string" },
+        parameter: {
+          type: "string",
+          description: "Optional. One parameter name, e.g. noael_cyno, to get its evidence in full.",
+        },
+      },
       required: ["case_id"],
     },
   },
@@ -277,10 +344,20 @@ export function runTool(name: string, input: Any): { result: Any; canvas?: Any }
           summary: c.toc.summary,
           outstanding: leaves
             .filter((l: Any) => l.status === "ABSENT")
-            .map((l: Any) => ({ section: `${l.number} ${l.title}`, why: l.detail })),
+            .map((l: Any) => ({
+              section: `${l.number} ${l.title}`,
+              why: l.detail,
+              owner: l.gap?.owner,
+              closes_when: l.gap?.source_needed,
+            })),
           needs_decision: leaves
             .filter((l: Any) => l.status === "NEEDS DECISION")
-            .map((l: Any) => ({ section: `${l.number} ${l.title}`, condition: l.detail })),
+            .map((l: Any) => ({
+              section: `${l.number} ${l.title}`,
+              condition: l.detail,
+              owner: l.gap?.owner,
+              closes_when: l.gap?.source_needed,
+            })),
           present: leaves
             .filter((l: Any) => l.status === "PRESENT")
             .map((l: Any) => `${l.number} ${l.title}`),
@@ -310,6 +387,133 @@ export function runTool(name: string, input: Any): { result: Any; canvas?: Any }
       };
     }
 
+    case "get_gap_crosswalk": {
+      const c = caseOr404(input.case_id);
+      if (!c.gap_crosswalk) return { result: partnerOnly(c) };
+      const x = c.gap_crosswalk;
+      return {
+        result: {
+          case_id: c.case_id,
+          summary: x.summary,
+          partner_source: x.partner_source,
+          method: x.method,
+          rows: x.rows.map((r: Any) => ({
+            verdict: r.verdict,
+            topic: r.topic,
+            their_gap: r.theirs ? `${r.theirs.id} ${r.theirs.item} (owner: ${r.theirs.owner})` : null,
+            our_finding: r.ours.map((o: Any) => `${o.where} - ${o.item}`),
+            closes_when: r.ours.map((o: Any) => o.source_needed).filter(Boolean),
+            our_owner: r.ours.map((o: Any) => o.owner).filter(Boolean),
+            corroborated_by: r.corroborated_by,
+            why_not: r.why_not,
+          })),
+          note: x.note,
+        },
+        canvas: { view: "gap_crosswalk", case_id: c.case_id },
+      };
+    }
+
+    case "get_form_1571_diff": {
+      const c = caseOr404(input.case_id);
+      if (!c.form_1571_diff) return { result: partnerOnly(c) };
+      const d = c.form_1571_diff;
+      return {
+        result: {
+          case_id: c.case_id,
+          summary: d.summary,
+          numbering_note: d.numbering_note,
+          boxes: d.rows.map((r: Any) => ({
+            box: r.box,
+            box_label: r.box_label,
+            verdict: r.verdict,
+            generated: r.ours?.value ?? null,
+            their_draft: r.theirs?.value ?? null,
+            their_item_number: r.theirs?.draft_number ?? null,
+            note: r.note,
+          })),
+          draft_items_not_on_the_form: d.unplaced.map((u: Any) => ({
+            their_item_number: u.draft_number,
+            label: u.label,
+            why: u.note,
+          })),
+          findings: d.findings,
+          note: d.note,
+        },
+        canvas: { view: "form_1571_diff", case_id: c.case_id },
+      };
+    }
+
+    case "get_partner_review": {
+      const c = caseOr404(input.case_id);
+      if (!c.partner_review) return { result: partnerOnly(c) };
+      return {
+        result: {
+          case_id: c.case_id,
+          summary: c.partner_review.summary,
+          checks: c.partner_review.checks,
+          findings: c.partner_review.findings,
+          note: c.partner_review.note,
+        },
+        canvas: { view: "partner_review", case_id: c.case_id },
+      };
+    }
+
+    case "get_invariant_scan": {
+      const c = caseOr404(input.case_id);
+      if (!c.invariant_scan) return { result: partnerOnly(c) };
+      const scan = c.invariant_scan;
+      const wanted = String(input.parameter || "").trim();
+
+      if (wanted) {
+        const row = scan.invariants.find((r: Any) => r.parameter === wanted);
+        if (!row) {
+          return {
+            result: {
+              error: `"${wanted}" is not one of the declared invariants. Available: ` +
+                scan.invariants.map((r: Any) => r.parameter).join(", "),
+            },
+          };
+        }
+        return {
+          result: { case_id: c.case_id, method: scan.method, invariant: row },
+          canvas: { view: "invariants", case_id: c.case_id },
+        };
+      }
+
+      return {
+        result: {
+          case_id: c.case_id,
+          summary: scan.summary,
+          corpus: scan.corpus,
+          declared_source: scan.declared_source,
+          method: scan.method,
+          // Full evidence is large. The overview gives the verdict per parameter; ask for
+          // one parameter by name to get its sentences.
+          invariants: scan.invariants.map((r: Any) => ({
+            parameter: r.parameter,
+            declared: `${r.declared_value} ${r.declared_unit}`.trim(),
+            status: r.status,
+            reason: r.reason || undefined,
+            assertions: r.assertions_confirmed,
+            differs: r.differs,
+            unreadable: r.unreadable,
+            documents: r.documents,
+          })),
+          note: scan.note,
+        },
+        canvas: { view: "invariants", case_id: c.case_id },
+      };
+    }
+
+    case "get_scope_boundary": {
+      const c = caseOr404(input.case_id);
+      if (!c.scope_boundary) return { result: partnerOnly(c) };
+      return {
+        result: { case_id: c.case_id, ...c.scope_boundary, package: c.partner_package },
+        canvas: { view: "input", case_id: c.case_id },
+      };
+    }
+
     default:
       throw new Error(`Unknown tool: ${name}`);
   }
@@ -323,22 +527,40 @@ export function caseList(): Any[] {
   return ORDER.map((id) => ({
     case_id: id,
     label: CASES[id].case_label,
+    display_name: CASES[id].display_name || id,
     scenario_type: CASES[id].scenario_type,
+    origin: CASES[id].origin || "synthetic",
     validation: CASES[id].validation.summary,
   }));
 }
 
 export function casePayload(caseId: string): Any {
   const c = caseOr404(caseId);
-  return {
+  const payload: Any = {
     case_id: c.case_id,
     label: c.case_label,
+    display_name: c.display_name || c.case_id,
     scenario_type: c.scenario_type,
+    origin: c.origin || "synthetic",
     source_records: c.source_records,
     form_1571: c.form_1571.fields,
     toc: c.toc,
     investigational_plan: c.investigational_plan,
     validation: { summary: c.validation.summary, issues: dedupeIssues(c.validation.issues) },
+    gap_register: c.gap_register,
     conflicts: c.canonical.conflicts || [],
   };
+  // Present only on a partner-supplied case. The page reads their absence as "this
+  // case has no answer key", which is true of all ten fictional cases.
+  for (const key of [
+    "partner_package",
+    "scope_boundary",
+    "gap_crosswalk",
+    "form_1571_diff",
+    "partner_review",
+    "invariant_scan",
+  ]) {
+    if (c[key]) payload[key] = c[key];
+  }
+  return payload;
 }

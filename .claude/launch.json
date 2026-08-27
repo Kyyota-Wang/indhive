@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "indhive",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "V1", "run", "dev"],
+      "port": 8787
+    }
+  ]
+}

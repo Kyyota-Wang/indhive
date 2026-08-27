@@ -363,3 +363,91 @@ details.passes li { font-size: 12.5px; color: var(--ink-2); }
 .chat-name small { font-size: 10.5px; font-weight: 400; color: var(--ink-3); letter-spacing: .02em; }
 .chat-panel { height: min(560px, calc(100vh - 96px)); }
 .msg.assistant .hint { color: var(--ink-3); font-size: 12.5px; }
+
+/* ---------- partner case block ---------- */
+/* The partner case is not the eleventh item in a list of ten. It gets its own
+   surface so the difference in kind is visible before anything is clicked. */
+.partner-block {
+  margin: 34px 0 4px; padding: 22px 24px; border-radius: 14px;
+  background: linear-gradient(135deg, #0E2F55 0%, #14507A 55%, #12756E 100%);
+  color: #fff; box-shadow: var(--shadow);
+}
+.partner-block.active { box-shadow: 0 0 0 2px var(--green), var(--shadow); }
+.partner-copy { max-width: 780px; }
+.partner-tag {
+  display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .07em;
+  text-transform: uppercase; padding: 3px 9px; border-radius: 20px;
+  background: rgba(255,255,255,.16); color: #D9F2E8; margin-bottom: 10px;
+}
+.partner-block h2 { font-size: 22px; letter-spacing: -.02em; }
+.partner-block p { margin: 8px 0 0; font-size: 13.5px; color: #D3E2F0; line-height: 1.65; }
+.partner-block .partner-fine { color: #9FC6BC; font-size: 12.5px; }
+.partner-block .btn.primary { margin-top: 15px; background: #fff; color: var(--navy); border-color: #fff; }
+.partner-block .btn.primary:hover { background: #E9F6F1; }
+.modcard.review .ic { background: #E4F4EE; color: #10704F; }
+
+/* ---------- scope boundary ---------- */
+.boundary.wide { margin: 22px 0 0; padding: 18px 20px; }
+.boundary.wide h4 { font-size: 14.5px; margin-bottom: 8px; }
+.boundary.wide p { margin: 8px 0 0; }
+.boundary.wide strong { display: inline; margin: 0; }
+.brow {
+  display: grid; grid-template-columns: minmax(0,1fr) minmax(0,240px); gap: 12px;
+  padding: 7px 0; border-top: 1px solid rgba(27,76,134,.14); font-size: 12.5px;
+}
+.bwhere { color: var(--ink-3); text-align: right; }
+.bfoot { border-top: 1px solid rgba(27,76,134,.14); padding-top: 11px; color: var(--ink-2); }
+
+/* ---------- side-by-side comparison tables ---------- */
+.xtable { background: #fff; border: 1px solid var(--line); border-radius: 11px; overflow: hidden; }
+.xhdr {
+  display: grid; grid-template-columns: minmax(0,1fr) 128px minmax(0,1fr); gap: 14px;
+  padding: 9px 16px; background: #F7FAFD; border-bottom: 1px solid var(--line);
+  font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); font-weight: 600;
+}
+.xhdr.diff { grid-template-columns: minmax(0,200px) minmax(0,1fr) 128px minmax(0,1fr); }
+.xhdr span:nth-child(2) { text-align: center; }
+.xhdr.diff span:nth-child(3) { text-align: center; }
+.xrow {
+  display: grid; grid-template-columns: minmax(0,1fr) 128px minmax(0,1fr); gap: 14px;
+  padding: 12px 16px; border-top: 1px solid var(--line); align-items: start;
+}
+.xrow.diff { grid-template-columns: minmax(0,200px) minmax(0,1fr) 128px minmax(0,1fr); }
+.xrow:first-of-type { border-top: none; }
+.xbox { font-size: 12.5px; color: var(--ink-2); }
+.xbox .fbox { display: block; margin-bottom: 3px; }
+.xcell { min-width: 0; }
+.xcell.empty { color: var(--ink-3); font-size: 12.5px; font-style: italic; }
+.xhead { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); font-weight: 600; }
+.xitem { font-size: 13px; margin-top: 2px; overflow-wrap: anywhere; }
+.xmeta { font-size: 11.5px; color: var(--ink-3); margin-top: 3px; }
+.xverdict { display: flex; justify-content: center; padding-top: 2px; }
+.xnote {
+  grid-column: 1 / -1; font-size: 11.5px; color: var(--ink-2);
+  background: #F7FAFD; border-radius: 7px; padding: 7px 10px; margin-top: 4px;
+}
+.pbody.clash { color: var(--conf-fg); }
+
+@media (max-width: 860px) {
+  .xhdr, .xhdr.diff { display: none; }
+  .xrow, .xrow.diff { grid-template-columns: 1fr; gap: 8px; }
+  .xverdict { justify-content: flex-start; }
+  .brow { grid-template-columns: 1fr; gap: 2px; }
+  .bwhere { text-align: left; }
+}
+
+.lowner { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
+.lowner .okey { color: var(--info-fg); font-weight: 600; }
+
+/* ---------- invariant scan ---------- */
+.invrow { margin-bottom: 10px; }
+.invrow .flabel code { font-family: var(--mono); font-size: 12.5px; }
+.ev {
+  margin-top: 8px; padding: 9px 11px; border-radius: 8px;
+  background: #F7FAFD; border-left: 3px solid var(--line-2);
+}
+.ev.flag { background: var(--warn-bg); border-left-color: var(--warn-fg); }
+.evhead { font-size: 11px; font-family: var(--mono); color: var(--ink-3); }
+.ev.flag .evhead { color: var(--warn-fg); }
+.evwhy { font-size: 12.5px; color: var(--warn-fg); margin-top: 3px; font-weight: 600; }
+.evtext { font-size: 12.5px; color: var(--ink-2); margin-top: 4px; overflow-wrap: anywhere; }
