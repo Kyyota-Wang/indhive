@@ -1,0 +1,154 @@
+{
+  "case_id": "PMX103",
+  "case_label": "PMX103 - PMX-103 partner-supplied Initial IND input",
+  "scenario_type": "missing",
+  "origin": "partner_supplied",
+  "display_name": "PMX-103",
+  "partner_package": {
+    "program": "PMX-103 (Indela Therapeutics, Inc.)",
+    "supplied_by": "clinical partner",
+    "package_date": "22 August 2026",
+    "documents": [
+      "06_Form_FDA_1571_AutoFilled.docx",
+      "07_CMC_Dossier_PMX103_v3.docx",
+      "08_Investigator_Brochure_PMX103_v3.docx",
+      "09_Nonclinical_Development_Plan_PMX103_v3.docx",
+      "10_Phase1_Protocol_PMX103_P1_001_v3.docx",
+      "11_Toxicology_Dossier_PMX103_v3.docx",
+      "12_IND_Drafting_Input_Brief_PMX103.docx",
+      "13_IND_Drafting_Instructions_PMX103.docx",
+      "14_IND_Section_Traceability_Matrix.xlsx",
+      "15_AI_Agent_Input_Schema.json"
+    ],
+    "confidentiality": "Partner documents carry a 21 CFR 312.130 marking and are not committed."
+  },
+  "scope_boundary": {
+    "headline": "Module 1 uses a narrow slice of this package. That is the scope, not a shortfall.",
+    "consumed": "Sponsor identity, product identity, protocol identity, submission intake and the 1.20 general investigational plan - about 35 scalar fields.",
+    "not_consumed": [
+      {
+        "what": "10 dose levels and the mTPI-2 escalation design",
+        "belongs_to": "Module 5 (protocol) / Module 2.7"
+      },
+      {
+        "what": "6 toxicology studies and 3 safety-pharmacology studies",
+        "belongs_to": "Module 4, summarised in Module 2.6"
+      },
+      {
+        "what": "9 CMC release specifications, lots and stability",
+        "belongs_to": "Module 3, summarised in Module 2.3"
+      },
+      {
+        "what": "10 in-vitro potency assays and the PK projection",
+        "belongs_to": "Module 4 / Module 2.6"
+      }
+    ],
+    "position": "Modules 2 to 5 are not built and are not planned for this demonstration. The partner's drafting instructions ask for a full M1-M5 dossier; this responds to Module 1 only."
+  },
+  "source_records": [
+    {
+      "record_id": "sponsor_profile",
+      "record_type": "sponsor_profile",
+      "title": "Sponsor identity from the partner input schema",
+      "source_type": "partner_supplied_structured_data",
+      "source_document": "15_AI_Agent_Input_Schema.json (program), 06_Form_FDA_1571_AutoFilled.docx (item 4)",
+      "fields": {
+        "sponsor.legal_name": "Indela Therapeutics, Inc.",
+        "sponsor.address_line_1": "1515 Hollins Street",
+        "sponsor.address_line_2": "Suite 400",
+        "sponsor.city": "Baltimore",
+        "sponsor.state": "MD",
+        "sponsor.postal_code": "21202",
+        "sponsor.country": "USA",
+        "sponsor.contact_name": "Ms. Laura Whitfield, JD, RAC",
+        "sponsor.contact_title": "VP, Regulatory Affairs",
+        "sponsor.phone": "+1 410 555 0143",
+        "sponsor.email": null
+      }
+    },
+    {
+      "record_id": "product_brief",
+      "record_type": "investigational_product_brief",
+      "title": "Investigational product identity",
+      "source_type": "partner_supplied_structured_data",
+      "source_document": "15_AI_Agent_Input_Schema.json (program), 12_IND_Drafting_Input_Brief_PMX103.docx (A.2)",
+      "fields": {
+        "product.code_name": "PMX-103",
+        "product.generic_name": "anti-PRAME/HLA-A*02:01-peptide × anti-CD3ε BiTE",
+        "product.dosage_form": "Sterile solution for IV; 1.0 mg / 1.1 mL per single-use vial",
+        "product.route": "IV",
+        "product.indication": "Locally advanced or metastatic solid tumors that are (i) PRAME-positive (central IHC H-score >= 80) AND (ii) HLA-A*02:01-positive, after >= 1 prior line of standard therapy including a PD-(L)1 inhibitor where indicated."
+      }
+    },
+    {
+      "record_id": "protocol_synopsis",
+      "record_type": "clinical_protocol_synopsis",
+      "title": "Protocol PMX-103-P1-001 document control block",
+      "source_type": "partner_supplied_structured_data",
+      "source_document": "10_Phase1_Protocol_PMX103_P1_001_v3.docx",
+      "fields": {
+        "protocol.protocol_number": "PMX-103-P1-001",
+        "protocol.title": "Phase 1 Clinical Study Protocol for PMX-103 (PMX-103-P1-001)",
+        "protocol.phase": "Phase 1",
+        "protocol.version": "3.0",
+        "protocol.protocol_date": "2026-08-22"
+      }
+    },
+    {
+      "record_id": "submission_intake",
+      "record_type": "regulatory_submission_intake",
+      "title": "Submission intake",
+      "source_type": "partner_supplied_structured_data",
+      "source_document": "15_AI_Agent_Input_Schema.json (program.submit_date), 06_Form_FDA_1571_AutoFilled.docx",
+      "fields": {
+        "submission.submission_type": "Initial IND",
+        "submission.submission_date": "2026-08-21",
+        "submission.serial_number": "0000",
+        "submission.ind_number": null
+      }
+    },
+    {
+      "record_id": "investigator_profile",
+      "record_type": "principal_investigator_profile",
+      "title": "Principal investigator profile - not supplied by the package",
+      "source_type": "partner_supplied_structured_data",
+      "source_document": "none; sites and investigators are not selected (GAP-04)",
+      "fields": {
+        "investigator.name": null,
+        "investigator.institution": null,
+        "investigator.address": null,
+        "investigator.phone": null,
+        "investigator.email": null
+      }
+    },
+    {
+      "record_id": "investigational_plan",
+      "record_type": "general_investigational_plan",
+      "title": "General investigational plan assembled from the brief B.3 clauses",
+      "source_type": "partner_supplied_structured_data",
+      "source_document": "12_IND_Drafting_Input_Brief_PMX103.docx (B.3), 15_AI_Agent_Input_Schema.json (program), 08_Investigator_Brochure_PMX103_v3.docx (7.2)",
+      "fields": {
+        "plan.rationale": "Mechanism of action: Simultaneous engagement of PRAME_peptide/HLA-A*02:01 on tumor and CD3epsilon on T cells -> polyclonal T-cell activation, granzyme/perforin-mediated lysis, IFN-gamma/TNF-alpha/IL-2 release, T-cell proliferation.\n\nClass precedent: Pr20 TCRm antibody (Chang et al., Nat Med 2017, PMC5490756); IMA402 TCER PRAME x CD3 (NCT05958121, Immatics); IMA203 TCR-T (Wermke et al., Nat Med 2025).\n\nStarting-dose rationale: Modified-MABEL: 0.5 microg flat (~0.0075 microg/kg in 70-kg subject) yields projected Cmax ~ 0.041 ng/mL, ~3x below the in vitro EC10 (0.12 ng/mL) for tumor-cell lysis and >= 100x below the lowest concentration producing measurable IFN-gamma/TNF-alpha release.",
+        "plan.general_approach": "Dose-escalation approach: modified mTPI-2 with accelerated titration lead-in, target DLT rate 30%, equivalence interval [0.25-0.35]\n\nDose levels: mTPI-2 with accelerated titration lead-in. Dose levels (microg flat): -1=0.25, 1=0.5, 2=1.5, 3=3, 4=5, 5=10, 6=20, 7=40, 8=80, 9=160 (MTD/RP2D estimate).\n\nStep-up priming: C1D1 0.5 microg -> C1D8 5 microg -> C2D1 onwards target cohort dose, with CRS/ICANS pre-med and 48-h in-patient observation for the first dose at each new step-up.\n\nPremedication: Acetaminophen 650 mg PO + diphenhydramine 25 mg PO + dexamethasone 8 mg IV 4-6 h before each step-up dose; cytoreduction not required.",
+        "plan.first_year_scope": "Study design: open-label, single-agent, dose-escalation + expansion, 21-day cycles, once-weekly IV dosing, mandatory step-up priming C1D1 0.5 ug / C1D8 5 ug\n\nNumber of sites: 4-6\n\nPlanned duration: escalation ~24 months, treatment <= 24 months per subject",
+        "plan.estimated_enrollment": "up to 50: <= 30 Part A + ~20 Part B",
+        "plan.anticipated_risks": "The anticipated risks of PMX-103 in the clinical study are: (i) cytokine release syndrome (CRS), which is a class effect of T-cell engagers and is anticipated based on the nonclinical findings; (ii) immune effector cell-associated neurotoxicity syndrome (ICANS) and other neurologic events; (iii) infusion-related reactions; (iv) hematologic toxicity, including lymphopenia and cytopenias; (v) hepatic transaminase elevations; (vi) infections, including opportunistic infections; and (vii) immunogenicity (ADA). These risks will be mitigated through the mandatory step-up priming schedule, premedication, in-patient observation during the first dose at each new step-up, intensive safety monitoring, and the CRS/ICANS management algorithm described in the protocol."
+      },
+      "planned_studies": [
+        {
+          "study_id": "PMX-103-P1-001",
+          "title": "Phase 1 Clinical Study Protocol for PMX-103 (PMX-103-P1-001)",
+          "design": "open-label, single-agent, dose-escalation + expansion, 21-day cycles, once-weekly IV dosing, mandatory step-up priming C1D1 0.5 ug / C1D8 5 ug",
+          "sample_size": "up to 50: <= 30 Part A + ~20 Part B",
+          "population": "Locally advanced or metastatic solid tumors that are (i) PRAME-positive (central IHC H-score >= 80) AND (ii) HLA-A*02:01-positive, after >= 1 prior line of standard therapy including a PD-(L)1 inhibitor where indicated.",
+          "status": "Protocol v3.0 dated 22 August 2026. Enrolment has not started."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Real-shaped input supplied by the clinical partner, mapped into the same canonical schema the ten fictional cases use. Values are copied verbatim from the package.",
+    "sponsor.email and every investigator.* field are unanswered by the package. They are left empty so the pipeline reports them rather than filling them in.",
+    "submission.ind_number is left empty: the partner's 1571 draft carries a reserved number (100,001), which is not an assigned IND number."
+  ]
+}

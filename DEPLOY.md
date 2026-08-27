@@ -52,13 +52,22 @@ FDA IND **Module 1** 自动化准备的演示。
 ## 2. 两半结构
 
 ```
-Data/POC data/          Python 流水线 —— 全部生成逻辑的唯一实现
+inputs/partner-package/    搭档的 PMX-103 输入包 —— 不入版本库（21 CFR 312.130）
         │
-        │  python run_poc.py --all        为 10 个案例生成产物
+        │  python build/extract_partner_package.py   映射成 case + 他自己的答案
+        │  python scripts/scan_invariants.py           扫 23 个不变量（按需跑，要 API key）
+        ▼
+indkit/                 Python 项目 —— 全部生成逻辑的唯一实现
+        │
+        │  python scripts/run_pipeline.py --all        为 11 个案例生成产物
         │  python build/bundle_cases.py   汇总成 V1/src/cases.json
         ▼
 V1/                     Cloudflare Worker
 ```
+
+搭档包里的文档带他自己的机密标记，**永远不要提交**。提交的是这两个脚本的**输出**：
+`data/source_cases/PMX103.json` 和 `data/partner_reference/PMX103.json`。
+`build/tamper_demo.py` 会把整个包复制到 `outputs/tamper/` 再改，那个目录同样在 `.gitignore` 里。
 
 1571 映射、Module 1 缺口分析、1.20 装配、校验规则**只在 Python 里实现了一次**。Worker 把它们的产物当构建产物发出去，只有两件事在请求时实时跑：cover letter 生成，和对生成文本的 grounding 核查。
 
@@ -177,9 +186,18 @@ npx wrangler deploy --dry-run       # 不上传，只验证能打包
 如果改过 Python 侧：
 
 ```bash
-cd "../Data/POC data" && python run_poc.py --all
-cd ../../V1 && python build/bundle_cases.py
+cd ../indkit && python scripts/run_pipeline.py --all
+cd ../V1 && python build/bundle_cases.py
 ```
+
+`scripts/run_pipeline.py --all` 不会重跑不变量扫描（那一步要语料和模型）。只有改了 `scripts/scan_invariants.py`
+或搭档换了文档才需要：
+
+```bash
+cd indkit && python scripts/scan_invariants.py
+```
+
+它写 `outputs/generated/PMX103/invariant_scan.json`，随后必须再跑一次 `bundle_cases.py`。
 
 ### 5.2 部署
 
@@ -219,8 +237,8 @@ for p in / /app.js /styles.css /favicon.svg; do
   curl -s -o /dev/null -w "$p  %{http_code}\n" "$U$p"
 done
 
-# 2. 案例接口（应返回 10 个）
-curl -s "$U/api/cases" | python -c "import json,sys; print(len(json.load(sys.stdin)['cases']), 'cases')"
+# 2. 案例接口（应返回 11 个：IND001-010 加 PMX103）
+curl -s "$U/api/cases" | python -c "import json,sys; d=json.load(sys.stdin)['cases']; print(len(d),'cases;', [c['case_id'] for c in d if c.get('origin')=='partner_supplied'])"
 
 # 3. 未知案例 -> 404
 curl -s -o /dev/null -w "bogus case %{http_code}\n" "$U/api/case/NOPE"
@@ -243,7 +261,7 @@ echo | openssl s_client -connect indhive.com:443 -servername indhive.com 2>/dev/
 | 检查 | 期望 |
 |---|---|
 | 页面 / 静态资源 | 全 200 |
-| `/api/cases` | 10 个案例 |
+| `/api/cases` | 11 个案例，其中 `PMX103` 的 `origin` 是 `partner_supplied` |
 | 未知案例 | 404 |
 | 超长输入 | 400 |
 | GET `/api/chat` | 405 |
@@ -253,10 +271,14 @@ echo | openssl s_client -connect indhive.com:443 -servername indhive.com 2>/dev/
 
 在真实浏览器打开 https://indhive.com：
 
-- 落地页是两组卡片：**Input**（1 张）+ **Generated output**（5 张）
+- 落地页顶部是 **PMX-103** 独立深色块，标 `Partner input · reviewable`
+- 下面是十个虚构案例，再下面两组卡片：**Input**（1 张）+ **Generated output**（5 张）
 - 切到 IND003，五张输出卡应出现红黄标记
 - 进 Source input，`draft_form_1571_tracker` 那条记录两个字段都带 `CONFLICT`
 - 点任一字段的目的地标签，跳到对应视图且目标字段已展开
+- 点 **Open PMX-103**：多出 **Checked against his answers** 一组四张卡，
+  底部出现「Module 1 只用一小片」的边界声明；再切回 IND001，这两块都消失
+- 缺口对照视图里，GAP-01 / GAP-04 / GAP-05 / GAP-06 四条都在「Reached by both」
 - 右下角对话球能开，console 无报错
 
 ### 最后一步：一次真实调用
