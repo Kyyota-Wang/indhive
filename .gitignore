@@ -1,5 +1,7 @@
 # Secrets — never commit. Production uses `wrangler secret put`.
 .dev.vars
+.env
+.env.local
 V1/.dev.vars
 
 # Dependencies and build caches

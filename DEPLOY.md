@@ -15,8 +15,8 @@
 | 正式地址 | https://indhive.com 和 https://www.indhive.com |
 | 测试地址 | https://indhive.pumpkin-ai-v2.workers.dev |
 | Worker 名 | `indhive` |
-| Cloudflare 账号 | `yunlongwang1987@gmail.com` |
-| Account ID | `bd61a7a5c0e63e9a5c05f70fb97a9b97`（标识符，不是密钥） |
+| Cloudflare 账号 | `<你的 Cloudflare 账号邮箱>` |
+| Account ID | `<ACCOUNT_ID>`（标识符，不是密钥） |
 | 当前线上 version | `23bc3e3d-d676-4512-84ac-b64de9327d6a` |
 | Git 仓库 | `Kyyota-Wang/indhive`，分支 `main` |
 
@@ -83,13 +83,13 @@ V1/                     Cloudflare Worker
 
 ### 3.1 Cloudflare 授权
 
-这台机器上 **wrangler 已经是登录状态**（OAuth，`yunlongwang1987@gmail.com`）。确认：
+这台机器上 **wrangler 已经是登录状态**（OAuth，`<你的 Cloudflare 账号邮箱>`）。确认：
 
 ```bash
 cd V1 && npx wrangler whoami
 ```
 
-应该看到 Account ID `bd61a7a5c0e63e9a5c05f70fb97a9b97`，以及 `workers_scripts (write)`、`workers_routes (write)` 权限。
+应该看到 Account ID `<ACCOUNT_ID>`，以及 `workers_scripts (write)`、`workers_routes (write)` 权限。
 
 如果失效了，重新授权：
 
